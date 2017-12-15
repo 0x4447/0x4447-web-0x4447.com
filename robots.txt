@@ -1,2 +1,8 @@
+#
+#	0x4447
+#
+
 User-agent: *
 Allow: /
+
+Sitemap: https://0x4447.com/sitemap.xml
