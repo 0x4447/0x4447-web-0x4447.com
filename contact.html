@@ -55,8 +55,8 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> </li>
-						<li class="nav-item"> <a class="nav-link" href="#">Clients</a> </li>
-						<li class="nav-item"> <a class="nav-link disabled" href="#">Tools</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="clients.html">Clients</a> </li>
+						<li class="nav-item"> <a class="nav-link disabled" href="tools.html">Tools</a> </li>
 						<li class="nav-item"> <a class="nav-link disabled" href="apps.html">Apps</a> </li>
 						<li class="nav-item"> <a class="nav-link disabled" href="about.html">About</a> </li>
 						<li class="nav-item"> <a class="nav-link disabled" href="contact.html">Contact</a> </li>
@@ -71,69 +71,45 @@
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 				<div class="carousel-item active">
-					<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+					<img class="third-slide" src="./assets/img/header_home.jpg" alt="Third slide">
 				</div>
 
 			</div>
 
 			<div class="container marketing">
 
-				<h1>Big Projects</h1>
 
-				<p>This are our long lasting relation ships where we help our clients building and constantly improving their projects. From planning, designing and executing. We work with them to keep their proejcts up to date while add new fetures that add values to their customers.</p>
 
-				<hr class="featurette-divider">
+	<form action="/contact/post" method="post" enctype="application/x-www-form-urlencoded">
 
-				<div class="row">
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>Sequr</h2>
-						<p>Sequr provides a comprehensive solution for managing access control for offices and buildings.</p>
-					</div>
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>Buslink</h2>
-						<p>Buslink allow small and mid size companies to manage the complexity of managing the whole production line. </p>
-					</div>
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>Divvy</h2>
-						<p>Divvy is a SaaS application that allows students and institution build their education history to help them later find work.</p>
-					</div>
-				</div>
+		<div class="form-group">
+			<label>Email address</label>
+			<input type="email" class="form-control {{status.email_from}}" name="email_from">
+		</div>
 
-				<div class="row">
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>Sparrow InterActive</h2>
-						<p>Sparrow aims to help small business manage tier social media by making it easy to find quality content and build stories around the.</p>
-					</div>
-				</div>
+		<div class="form-group">
+			<label for="exampleFormControlSelect1">Subject</label>
+			<select class="form-control {{status.subject}}" id="exampleFormControlSelect1" name="subject">
+				<option>General inquiry</option>
+				<option>Business Proposal</option>
+				<option>Feature Request</option>
+				<option>Issue with the site</option>
+			</select>
+		</div>
 
-				<h1>Smaller Projects</h1>
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1">Your Message</label>
+			<textarea class="form-control {{status.body}}" id="exampleFormControlTextarea1" rows="10" name="body"></textarea>
+		</div>
 
-				<p>One thing that we for sure enjoy are small an interesting projects that are fun to work on and changeling at the same time. Knowing that we can deliver solutions that will benefit our clients. </p>
+		<button type="submit" class="btn btn-primary eggshell-background">Send</button>
 
-				<hr class="featurette-divider">
-
-				<div class="row">
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>Webcorp</h2>
-						<p>WebCorp offers an affordable cloud-based job application form and applicant tracking system for employers of all sizes.</p>
-					</div>
-					<div class="col-lg-4">
-						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-						<h2>TemplarBit</h2>
-						<p>The most effective way to protect applications from malicious activity</p>
-					</div>
-				</div>
-
-				<hr class="featurette-divider">
+	</form>
 
 				<h1>The next step</h1>
 
-				<p>Now that you know who trusted us, check out what tools we gave back to the community </p>
+				<p>Now that you've contacted us, the truly last thing to do is to just wait :) </p>
+
 
 				<hr class="featurette-divider">
 
