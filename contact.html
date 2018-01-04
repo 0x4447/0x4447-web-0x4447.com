@@ -87,35 +87,39 @@
 
 			<div class="container marketing">
 
-				<form action="/contact/post" method="post" enctype="application/x-www-form-urlencoded">
+				<div class="row">
 
-					<div class="form-group">
-						<label>Email address</label>
-						<input type="email" class="form-control {{status.email_from}}" name="email_from">
+					<div class="col">
+						<p>0x4447 LLC</p>
+						<p>8 The Green Suite #7254</p>
+						<p>Dover DE 19901-3618</p>
+						<p>United State</p>
 					</div>
 
-					<div class="form-group">
-						<label for="exampleFormControlSelect1">Subject</label>
-						<select class="form-control {{status.subject}}" id="exampleFormControlSelect1" name="subject">
-							<option>General inquiry</option>
-							<option>Business Proposal</option>
-							<option>Feature Request</option>
-							<option>Issue with the site</option>
-						</select>
+					<div class="col-9">
+
+						<form action="/contact/post" method="post" enctype="application/x-www-form-urlencoded">
+
+							<div class="form-group">
+								<label>Email address</label>
+								<input type="email" class="form-control {{status.email_from}}" name="email_from">
+							</div>
+
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1">Your Message</label>
+								<textarea class="form-control {{status.body}}" id="exampleFormControlTextarea1" rows="10" name="body"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-primary eggshell-background">Send</button>
+
+						</form>
+
 					</div>
+				</div>
 
-					<div class="form-group">
-						<label for="exampleFormControlTextarea1">Your Message</label>
-						<textarea class="form-control {{status.body}}" id="exampleFormControlTextarea1" rows="10" name="body"></textarea>
-					</div>
+<!-- 				<h1>The next step</h1>
 
-					<button type="submit" class="btn btn-primary eggshell-background">Send</button>
-
-				</form>
-
-				<h1>The next step</h1>
-
-				<p>Now that you've contacted us, the truly last thing to do is to just wait :) </p>
+				<p>Now that you've contacted us, the truly last thing to do is to just wait :) </p> -->
 
 				<hr class="featurette-divider">
 
