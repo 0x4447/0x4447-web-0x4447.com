@@ -46,8 +46,8 @@
 		<header>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
-				<a class="navbar-brand" href="#">
-					<img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">0x4447
+				<a class="navbar-brand" href="home.html">
+					<img src="./assets/img/logo.png" width="28" height="28" class="d-inline-block align-top" alt="">
 				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,12 +56,12 @@
 
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active"> <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a> </li>
+						<li class="nav-item"> <a class="nav-link" href="home.html">Home</a> </li>
 						<li class="nav-item"> <a class="nav-link" href="clients.html">Clients</a> </li>
-						<li class="nav-item"> <a class="nav-link disabled" href="tools.html">Tools</a> </li>
-						<li class="nav-item"> <a class="nav-link disabled" href="apps.html">Apps</a> </li>
-						<li class="nav-item"> <a class="nav-link disabled" href="about.html">About</a> </li>
-						<li class="nav-item"> <a class="nav-link disabled" href="contact.html">Contact</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="tools.html">Tools</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="apps.html">Apps</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+						<li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
 					</ul>
 				</div>
 
@@ -81,8 +81,7 @@
 
 			</div>
 
-
-			<!-- Marketing messaging and featurettes <img src="./assets/img/home/circles/circle1@1x.jpg" srcset="./assets/img/home/circles/circle1@2x.jpg 2x" width="140" height="140" alt="We can manage"/>
+			<!-- Marketing messaging and featurettes
 			================================================== -->
 			<!-- Wrap the rest of the page in another container to center all the content. -->
 
@@ -173,18 +172,14 @@
 
 				<hr class="featurette-divider">
 
-				<!-- /END THE FEATURETTES -->
+			</div>
 
-			</div><!-- /.container -->
-
-
-			<!-- FOOTER -->
 			<footer class="container">
 				<p class="float-right"><a href="#">Back to top</a></p>
 				<p>© 2018 0x4447 LLC</p>
 			</footer>
-		</main>
 
+		</main>
 
 	</body>
 
@@ -208,16 +203,19 @@
 			//	2.	Tell the Service Worker to register a new worker
 			//
 			navigator.serviceWorker
-			.register('./service_worker.js', options)
-			.then(function(reg){
+				.register('./service_worker.js', options)
+				.then(function(reg){
 
-			// Nothing to do
+					// Nothing to do
 
-			}).catch(function(error) {
+				}).catch(function(error) {
 
-				console.log("No it didn't. This happened: ", error);
+					//
+					//	->	Log what went wrong
+					//
+					console.log("No it didn't. This happened: ", error);
 
-			});
+				});
 		}
 
 	</script>
