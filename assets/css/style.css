@@ -30,7 +30,12 @@ body
 
 .bg-dark
 {
-	background-color: #000000 !important
+	background-color: #27303b !important
+}
+
+.navbar-dark .navbar-nav .nav-link
+{
+	color: #c0ab47;
 }
 
 .rounded-circle
