@@ -125,38 +125,6 @@
 
 	<script>
 
-		if('serviceWorker' in navigator)
-		{
-			//
-			//	1.	Set the options for the worker
-			//
-			var options = {
-				scope: './'
-			}
-
-			//
-			//	2.	Tell the Service Worker to register a new worker
-			//
-			navigator.serviceWorker
-				.register('./service_worker.js', options)
-				.then(function(reg){
-
-					// Nothing to do
-
-				}).catch(function(error) {
-
-					//
-					//	->	Log what went wrong
-					//
-					console.log("No it didn't. This happened: ", error);
-
-				});
-		}
-
-	</script>
-
-	<script>
-
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
