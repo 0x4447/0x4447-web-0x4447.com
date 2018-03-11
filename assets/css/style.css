@@ -26,24 +26,14 @@ body
 	padding-bottom: 3rem;
 }
 
-.rounded-circle
-{
-	margin-bottom: 15px;
-}
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel
+#header
 {
 	margin-bottom: 4rem;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel-item
+.rounded-circle
 {
-	height: 32rem;
+	margin-bottom: 15px;
 }
 
 /* MARKETING CONTENT
