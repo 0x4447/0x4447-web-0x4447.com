@@ -4,10 +4,11 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - apt-get update -y
+      - npm install
   pre_build:
     commands:
       - echo Entered the pre_build phase...
+      - npm run copy
   build:
     commands:
       - echo Entered the build phase...
@@ -18,5 +19,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
-  discard-paths: yes
+    - '_output/*'
