@@ -62,15 +62,10 @@ function filter(file)
 {
 	let state = true;
 
-	if(file == '.git')
-	{
-		state = false;
-	}
-
-	if(file == 'output')
-	{
-		state = false;
-	}
+	if(file == '.git') 			{ state = false; }
+	if(file == 'output') 		{ state = false; }
+	if(file == '.DS_Store') 	{ state = false; }
+	if(file == 'README.md') 	{ state = false; }
 
 	return state;
 }
