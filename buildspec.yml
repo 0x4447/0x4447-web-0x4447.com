@@ -20,4 +20,4 @@ phases:
 artifacts:
   files:
     - '_output/**/*'
-  base-directory: '0x4447-com/_output'
+  base-directory: '_output'
