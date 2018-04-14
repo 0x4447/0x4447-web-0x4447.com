@@ -1,47 +1,56 @@
-<h1>Feel Free to Contact Us</h1>
-
-<p>Please don't hesitate to contact us if you have an idea; if you need help in one specific field or with a certain portion of your project; or if you'd like us to help you build a solution from the ground up. And let's not think about cost right now. Let's see if we want to work together first, and the rest will fall into place on its own.</p>
-
-<hr class="featurette-divider">
-
-<div class="row">
-
-	<div class="col">
-		<address>
-		<strong>0x4447 LLC</strong><br>
-		8 The Green STE 7254<br>
-		Dover, DE 19901<br>
-		USA<br>
-		<br>
-		Phone: <a href="tel:+1 (612) 255-9972‬">+1 (612) 255-9972‬</a>
-		</address>
-	</div>
-
-	<div class="col-9">
-
-		<form>
-			<div class="form-group">
-				<label>Email address</label>
-				<input id="email_from" type="email" class="form-control" required>
-			</div>
-
-			<div class="form-group">
-				<label for="exampleFormControlTextarea1">Your Message</label>
-				<textarea id="body" class="form-control" rows="10" required></textarea>
-			</div>
-		</form>
-
-		<button id="send" type="submit" class="btn btn-primary eggshell-background has-spinner">
-			<span class="spinner active"><i class="icon-spin icon-refresh"></i></span>
-			Send
-		</button>
-
-	</div>
+<div id="header">
+	<picture>
+		<source srcset="./assets/img/contact/header@1x.jpg 1x, ./assets/img/contact/header@2x.jpg 2x" />
+		<img class="featurette-image img-fluid mx-auto" src="./assets/img/contact/header@1x.jpg" alt="We can manage" />
+	</picture>
 </div>
 
-<hr class="featurette-divider">
+<div class="container marketing">
 
-<script>
+	<h1>Feel Free to Contact Us</h1>
+
+	<p>Please don't hesitate to contact us if you have an idea; if you need help in one specific field or with a certain portion of your project; or if you'd like us to help you build a solution from the ground up. And let's not think about cost right now. Let's see if we want to work together first, and the rest will fall into place on its own.</p>
+
+	<hr class="featurette-divider">
+
+	<div class="row">
+
+		<div class="col">
+			<address>
+				<strong>0x4447 LLC</strong><br>
+				8 The Green STE 7254<br>
+				Dover, DE 19901<br>
+				USA<br>
+				<br>
+				Phone: <a href="tel:+1 (612) 255-9972‬">+1 (612) 255-9972‬</a>
+			</address>
+		</div>
+
+		<div class="col-9">
+
+			<form>
+				<div class="form-group">
+					<label>Email address</label>
+					<input id="email_from" type="email" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Your Message</label>
+					<textarea id="body" class="form-control" rows="10" required></textarea>
+				</div>
+			</form>
+
+			<button id="send" type="submit" class="btn btn-primary eggshell-background has-spinner">
+				<span class="spinner active"><i class="icon-spin icon-refresh"></i></span>
+				Send
+			</button>
+
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<script>
 
 		//
 		//  1.  By default we assume that we are dealing with the staging
@@ -104,7 +113,7 @@
 			//	7.	Make the request
 			//
 			$.post(url, obj)
-				.done(function(response) {
+			.done(function(response) {
 
 					//
 					//	->	Redirect to the thank you page
@@ -112,11 +121,11 @@
 					window.location = "thankyou";
 
 				})
-				.fail(function(error) {
+			.fail(function(error) {
 
-					console.error(error.responseJSON.message);
+				console.error(error.responseJSON.message);
 
-				});
+			});
 
 		});
 
@@ -135,3 +144,5 @@
 			}
 		}
 	</script>
+
+</div>
