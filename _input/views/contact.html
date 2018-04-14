@@ -1,0 +1,137 @@
+<h1>Feel Free to Contact Us</h1>
+
+<p>Please don't hesitate to contact us if you have an idea; if you need help in one specific field or with a certain portion of your project; or if you'd like us to help you build a solution from the ground up. And let's not think about cost right now. Let's see if we want to work together first, and the rest will fall into place on its own.</p>
+
+<hr class="featurette-divider">
+
+<div class="row">
+
+	<div class="col">
+		<address>
+		<strong>0x4447 LLC</strong><br>
+		8 The Green STE 7254<br>
+		Dover, DE 19901<br>
+		USA<br>
+		<br>
+		Phone: <a href="tel:+1 (612) 255-9972‬">+1 (612) 255-9972‬</a>
+		</address>
+	</div>
+
+	<div class="col-9">
+
+		<form>
+			<div class="form-group">
+				<label>Email address</label>
+				<input id="email_from" type="email" class="form-control" required>
+			</div>
+
+			<div class="form-group">
+				<label for="exampleFormControlTextarea1">Your Message</label>
+				<textarea id="body" class="form-control" rows="10" required></textarea>
+			</div>
+		</form>
+
+		<button id="send" type="submit" class="btn btn-primary eggshell-background has-spinner">
+			<span class="spinner active"><i class="icon-spin icon-refresh"></i></span>
+			Send
+		</button>
+
+	</div>
+</div>
+
+<hr class="featurette-divider">
+
+<script>
+
+		//
+		//  1.  By default we assume that we are dealing with the staging
+		//      environment
+		//
+		var stage = 'production';
+
+		//
+		//  2.  Check if we are in production
+		//
+		if(document.location.hostname == '0x4447.com')
+		{
+			//
+			//  1.  Switch to production
+			//
+			stage = 'production';
+		}
+
+		//
+		//	3.	React when the user wants to send the message
+		//
+		$('#send').on('click', function(event) {
+
+			//
+			//	1.	Prevent the form from default submit action
+			//
+			event.preventDefault();
+
+			//
+			//	2.	Remove the click listener so the user can't keep on clicking
+			//
+			$('#send').off('click');
+
+
+			//
+			//	3.	Visually disable the button
+			//
+			$('#send').addClass("disabled")
+
+			//
+			//	4.	Get all the data that we need for the message
+			//
+			var email_from 	= $('#email_from').val();
+			var body 		= $('#body').val();
+
+			//
+			//	5.	Set the URL in a clear variable
+			//
+			var url = 'https://7ydfu39cv8.execute-api.us-east-1.amazonaws.com/' + stage + '/email';
+
+			//
+			//	6.	Prepare the data
+			//
+			var obj = JSON.stringify({
+				email_from: email_from,
+				body: body
+			});
+
+			//
+			//	7.	Make the request
+			//
+			$.post(url, obj)
+				.done(function(response) {
+
+					//
+					//	->	Redirect to the thank you page
+					//
+					window.location = "thankyou";
+
+				})
+				.fail(function(error) {
+
+					console.error(error.responseJSON.message);
+
+				});
+
+		});
+
+	</script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"url": "https://0x4447.com",
+			"name": "0x4447 LLC",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1-612-255-9972‬",
+				"contactType": "Customer service"
+			}
+		}
+	</script>
