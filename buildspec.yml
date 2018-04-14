@@ -8,6 +8,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
+      - npm i -g @0x4447/avocado
   build:
     commands:
       - echo Entered the build phase...
