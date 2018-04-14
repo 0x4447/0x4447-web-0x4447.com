@@ -1,0 +1,20 @@
+{
+  "name": "0x4447.com",
+  "version": "1.0.0",
+  "description": "The official Homepage of 0x4447.com",
+  "main": "home.js",
+  "scripts": {
+    "copy": "./scripts/copy.js",
+    "rename": "./scripts/rename.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "0x4447",
+  "bugs": {
+    "url": "https://github.com/0x4447/0x4447.com/issues"
+  },
+  "homepage": "https://github.com/0x4447/0x4447.com#readme",
+  "dependencies": {
+    "ncp": "^2.0.0",
+    "recursive-readdir": "^2.2.2"
+  }
+}
