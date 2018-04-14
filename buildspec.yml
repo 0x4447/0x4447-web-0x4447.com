@@ -8,8 +8,6 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - npm run copy
-      - npm run rename
   build:
     commands:
       - echo Entered the build phase...
