@@ -20,22 +20,22 @@
 		<meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 
-		<meta property="og:image" content="https://0x4447.com/assets/img/contact/og.jpg">
+		<meta property="og:image" content="https://0x4447.com/assets/img/home/og.jpg">
 		<meta property="og:image:width" content="1103">
 		<meta property="og:image:height" content="577">
 		<meta property="og:url" content="https://0x4447.com">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="0x4447 .. Contact">
-		<meta property="og:description" content="If you have help in a technical project, just contact us and we will help you out.">
+		<meta property="og:title" content="0x4447">
+		<meta property="og:description" content="We build software using Patient, Respect &amp; Mindfulness. We are not here to take your money, we are here for your money to be well invested.">
 
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:creator" content="@dawidgatti">
-		<meta name="twitter:image" content="https://0x4447.com/assets/img/contact/og.jpg">
-		<meta name="twitter:title" content="0x4447 .. Contact">
-		<meta name="twitter:description" content="If you have help in a technical project, just contact us and we will help you out.">
+		<meta name="twitter:image" content="https://0x4447.com/assets/img/home/og.jpg">
+		<meta name="twitter:title" content="0x4447">
+		<meta name="twitter:description" content="We build software using Patient, Respect &amp; Mindfulness. We are not here to take your money, we are here for your money to be well invested.">
 
 		<title>0x4447 LLC .. Contact</title>
-		<meta name="description" content="If you have help in a technical project, just contact us and we will help you out.">
+		<meta name="description" content="">
 
 		<link rel="stylesheet" href="./assets/css/bootstrap-v4.0.0.min.css">
 		<link rel="stylesheet" href="./assets/css/style.css">
@@ -47,19 +47,12 @@
 			<nav class="site-header sticky-top py-1">
 				<div class="container d-flex flex-column flex-md-row justify-content-between">
 
-					<a class="py-2" href="/">
-						<picture class="d-block mx-auto">
-							<source srcset="./assets/img/_global/logo@1x.png 1x, ./assets/img/_global/logo@2x.png 2x" />
-							<img class="d-block mx-auto" src="./assets/img/_global/logo@1x.png" />
-						</picture>
-					</a>
-
 					<a class="py-2 d-none d-md-inline-block" href="/">Home</a>
-					<a class="py-2 d-none d-md-inline-block" href="about">About</a>
-					<a class="py-2 d-none d-md-inline-block" href="clients">Clients</a>
-					<a class="py-2 d-none d-md-inline-block" href="toolbox">Toolbox</a>
-					<a class="py-2 d-none d-md-inline-block" href="apps">Apps</a>
-					<a class="py-2 d-none d-md-inline-block" href="contact">Contact</a>
+					<a class="py-2 d-none d-md-inline-block" href="about.html">About</a>
+					<a class="py-2 d-none d-md-inline-block" href="clients.html">Clients</a>
+					<a class="py-2 d-none d-md-inline-block" href="toolbox.html">Toolbox</a>
+					<a class="py-2 d-none d-md-inline-block" href="apps.html">Apps</a>
+					<a class="py-2 d-none d-md-inline-block" href="contact.html">Contact</a>
 
 				</div>
 			</nav>
@@ -69,8 +62,8 @@
 
 			<div id="header">
 				<picture>
-					<source srcset="./assets/img/contact/header@1x.jpg 1x, ./assets/img/contact/header@2x.jpg 2x" />
-					<img class="featurette-image img-fluid mx-auto" src="./assets/img/contact/header@1x.jpg" alt="We can manage" />
+					<source srcset="./assets/img/home/header@1x.jpg 1x, ./assets/img/home/header@2x.jpg 2x" />
+					<img class="featurette-image img-fluid mx-auto" src="./assets/img/home/header@1x.jpg" alt="We can manage" />
 				</picture>
 			</div>
 
@@ -119,6 +112,100 @@
 
 				<hr class="featurette-divider">
 
+				<script>
+
+						//
+						//  1.  By default we assume that we are dealing with the staging
+						//      environment
+						//
+						var stage = 'production';
+
+						//
+						//  2.  Check if we are in production
+						//
+						if(document.location.hostname == '0x4447.com')
+						{
+							//
+							//  1.  Switch to production
+							//
+							stage = 'production';
+						}
+
+						//
+						//	3.	React when the user wants to send the message
+						//
+						$('#send').on('click', function(event) {
+
+							//
+							//	1.	Prevent the form from default submit action
+							//
+							event.preventDefault();
+
+							//
+							//	2.	Remove the click listener so the user can't keep on clicking
+							//
+							$('#send').off('click');
+
+
+							//
+							//	3.	Visually disable the button
+							//
+							$('#send').addClass("disabled")
+
+							//
+							//	4.	Get all the data that we need for the message
+							//
+							var email_from 	= $('#email_from').val();
+							var body 		= $('#body').val();
+
+							//
+							//	5.	Set the URL in a clear variable
+							//
+							var url = 'https://7ydfu39cv8.execute-api.us-east-1.amazonaws.com/' + stage + '/email';
+
+							//
+							//	6.	Prepare the data
+							//
+							var obj = JSON.stringify({
+								email_from: email_from,
+								body: body
+							});
+
+							//
+							//	7.	Make the request
+							//
+							$.post(url, obj)
+								.done(function(response) {
+
+									//
+									//	->	Redirect to the thank you page
+									//
+									window.location = "thankyou";
+
+								})
+								.fail(function(error) {
+
+									console.error(error.responseJSON.message);
+
+								});
+
+						});
+
+					</script>
+
+					<script type="application/ld+json">
+						{
+							"@context": "http://schema.org",
+							"@type": "Organization",
+							"url": "https://0x4447.com",
+							"name": "0x4447 LLC",
+							"contactPoint": {
+								"@type": "ContactPoint",
+								"telephone": "+1-612-255-9972‬",
+								"contactType": "Customer service"
+							}
+						}
+					</script>
 			</div>
 
 			<footer class="container">
@@ -127,7 +214,7 @@
 					<a target="_blank" href="https://travis-ci.org/0x4447"><img width="20" width="20" src="./assets/img/_global/travisci.svg" /></a> //
 					<a target="_blank" href="https://github.com/0x4447"><img width="20" width="20" src="./assets/img/_global/github.svg" /></a>
 				</p>
-				<p>© 0x4447 LLC - <a class="text-muted" target="_blank" href="https://github.com/0x4447/0x4447.com/commit/14b3553ba12fc2353ace3091ae73e6e04909cb9c">14b3553</a> </p>
+				<p>© 0x4447 LLC // <a class="text-muted" target="_blank" href="https://github.com/0x4447/0x4447.com/commit/14b3553ba12fc2353ace3091ae73e6e04909cb9c">14b3553</a> </p>
 			</footer>
 
 		</main>
@@ -142,79 +229,25 @@
 	<script>
 
 		//
-		//  1.  By default we assume that we are dealing with the staging
-		//      environment
+		//	Loop over all the menu items
 		//
-		var stage = 'production';
-
-		//
-		//  2.  Check if we are in production
-		//
-		if(document.location.hostname == '0x4447.com')
-		{
-			//
-			//  1.  Switch to production
-			//
-			stage = 'production';
-		}
-
-		//
-		//	3.	React when the user wants to send the message
-		//
-		$('#send').on('click', function(event) {
+		$('.nav-link').each(function() {
 
 			//
-			//	1.	Prevent the form from default submit action
+			//	1.	Get the href attribute of each menu element
 			//
-			event.preventDefault();
+			let page = $(this).attr("href");
 
 			//
-			//	2.	Remove the click listener so the user can't keep on clicking
+			//	2.	Check if the href matches the active page
 			//
-			$('#send').off('click');
-
-
-			//
-			//	3.	Visually disable the button
-			//
-			$('#send').addClass("disabled")
-
-			//
-			//	4.	Get all the data that we need for the message
-			//
-			var email_from 	= $('#email_from').val();
-			var body 		= $('#body').val();
-
-			//
-			//	5.	Set the URL in a clear variable
-			//
-			var url = 'https://7ydfu39cv8.execute-api.us-east-1.amazonaws.com/' + stage + '/email';
-
-			//
-			//	6.	Prepare the data
-			//
-			var obj = JSON.stringify({
-				email_from: email_from,
-				body: body
-			});
-
-			//
-			//	7.	Make the request
-			//
-			$.post(url, obj)
-				.done(function(response) {
-
-					//
-					//	->	Redirect to the thank you page
-					//
-					window.location = "thankyou";
-
-				})
-				.fail(function(error) {
-
-					console.error(error.responseJSON.message);
-
-				});
+			if(page == location.pathname)
+			{
+				//
+				//	1.	Activate the menu item
+				//
+				$(this).parent().addClass('active');
+			}
 
 		});
 
@@ -229,19 +262,4 @@
 
 	</script>
 
-	<script type="application/ld+json">
-		{
-			"@context": "http://schema.org",
-			"@type": "Organization",
-			"url": "https://0x4447.com",
-			"name": "0x4447 LLC",
-			"contactPoint": {
-				"@type": "ContactPoint",
-				"telephone": "+1-612-255-9972‬",
-				"contactType": "Customer service"
-			}
-		}
-	</script>
-
 </html>
-
