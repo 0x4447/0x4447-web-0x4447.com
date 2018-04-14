@@ -16,4 +16,5 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
+      - aws s3 cp _output s3://0x4447.com --recursive
       - echo Build completed on `date`
