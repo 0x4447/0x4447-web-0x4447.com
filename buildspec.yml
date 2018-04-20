@@ -9,6 +9,7 @@ phases:
     commands:
       - echo Entered the pre_build phase...
       - npm i -g @0x4447/avocado
+      - npm i -g @0x4447/potato
   build:
     commands:
       - echo Entered the build phase...
@@ -17,6 +18,6 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - aws s3 cp _output s3://0x4447.com --recursive
+      - potato -s _output -u -b 0x4447.com
       - aws cloudfront create-invalidation --distribution-id E3KWY6RFS0FUFE --paths /*
       - echo Build completed on `date`
