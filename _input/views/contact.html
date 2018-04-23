@@ -50,8 +50,6 @@
 
 	<hr class="featurette-divider">
 
-	<script crossorigin="anonymous" src="./assets/js/jquery-3.2.1.min.js"></script>
-
 	<script>
 
 		//
@@ -61,7 +59,12 @@
 		var stage = 'production';
 
 		//
-		//  2.  Check if we are in production
+		//	2.	While developing we need the file extension
+		//
+		var extension = '.html';
+
+		//
+		//  3.  Check if we are in production
 		//
 		if(document.location.hostname == '0x4447.com')
 		{
@@ -69,6 +72,11 @@
 			//  1.  Switch to production
 			//
 			stage = 'production';
+
+			//
+			//	2.	When in production we remove the extension
+			//
+			extension = '';
 		}
 
 		//
@@ -86,46 +94,67 @@
 			//
 			$('#send').off('click');
 
+			//
+			//	3.	Replace the button txt to let the user know what is
+			//		happening
+			//
+			$('#send').text('Sending...');
 
 			//
-			//	3.	Visually disable the button
+			//	4.	Visually disable all the elements of the form
 			//
 			$('#send').addClass("disabled");
+			$('#email_from').attr("disabled", true);
+			$('#body').attr("disabled", true);
 
 			//
-			//	4.	Get all the data that we need for the message
+			//	5.	Get all the data that we need for the message
 			//
 			var email_from 	= $('#email_from').val();
 			var body 		= $('#body').val();
 
 			//
-			//	5.	Set the URL in a clear variable
+			//	6.	Set the URL in a clear variable
 			//
-			var url = 'https://7ydfu39cv8.execute-api.us-east-1.amazonaws.com/' + stage + '/email';
+			var url = 'https://api.0x4447.com/' + stage + '/email';
 
 			//
-			//	6.	Prepare the data
+			//	7.	Prepare the data
 			//
 			var obj = JSON.stringify({
-				email_from: email_from,
-				body: body
+				from: email_from,
+				text: body
 			});
 
 			//
-			//	7.	Make the request
+			//	8.	Make the request
 			//
 			$.post(url, obj)
 			.done(function(response) {
 
-					//
-					//	->	Redirect to the thank you page
-					//
-					window.location = "thankyou";
+				//
+				//	->	Redirect to the thank you page
+				//
+				window.location = 'thankyou' + extension;
 
-				})
+			})
 			.fail(function(error) {
 
-				console.error(error.responseJSON.message);
+				//
+				//	1.	Convert the string in to a JS object
+				//
+				var parsed_error = JSON.parse(error.responseText);
+
+				//
+				//	2.	Set the message error or use a default string if no
+				//		error message was passed.
+				//
+				var message = parsed_error.message || "n/a";
+
+				//
+				//	->	Show the final message
+				//
+				console.error("Error Message: " + message);
 
 			});
 
