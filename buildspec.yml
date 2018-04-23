@@ -20,5 +20,4 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - potato -s _output -u -b 0x4447.com
-      - aws cloudfront create-invalidation --distribution-id E3KWY6RFS0FUFE --paths /*
       - echo Build completed on `date`
