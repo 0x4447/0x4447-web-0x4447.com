@@ -6,6 +6,22 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://0x4447.com/</loc>
-  <lastmod>2017-12-06T21:39:33+00:00</lastmod>
+  <lastmod>2018-04-25T21:39:33+00:00</lastmod>
+</url>
+<url>
+  <loc>https://0x4447.com/about</loc>
+  <lastmod>2018-04-25T21:39:33+00:00</lastmod>
+</url>
+<url>
+  <loc>https://0x4447.com/clients</loc>
+  <lastmod>2018-04-25T21:39:33+00:00</lastmod>
+</url>
+<url>
+  <loc>https://0x4447.com/toolbox</loc>
+  <lastmod>2018-04-25T21:39:33+00:00</lastmod>
+</url>
+<url>
+  <loc>https://0x4447.com/contact</loc>
+  <lastmod>2018-04-25T21:39:33+00:00</lastmod>
 </url>
 </urlset>
