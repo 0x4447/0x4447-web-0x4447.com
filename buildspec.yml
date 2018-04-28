@@ -19,9 +19,8 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - ls -la
+      - ls -la _input
       - avocado -s .
-      - ls -la
       - ls -la _input
       - ls -la _output
   post_build:
