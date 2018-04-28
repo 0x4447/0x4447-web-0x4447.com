@@ -23,6 +23,7 @@ phases:
       - avocado -s .
       - ls -la
       - ls -la _output
+      - cat _output/home
   post_build:
     commands:
       - echo Entered the post_build phase...
