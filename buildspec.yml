@@ -1,5 +1,10 @@
 version: 0.2
 
+env:
+  parameter-store:
+    ACCESS_KEY: "access_key"
+    SECRET_ACCESS_KEY: "secret_access_key"
+
 phases:
   install:
     commands:
@@ -19,5 +24,5 @@ phases:
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - potato -s _output -u -b 0x4447.com
+      - potato -s _output -u -b 0x4447.com --access_key $ACCESS_KEY --secret_key $SECRET_ACCESS_KEY
       - echo Build completed on `date`
