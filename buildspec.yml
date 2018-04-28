@@ -13,7 +13,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - npm i -g git://github.com/0x4447/0x4447-cli-node-avocado.git#development
+      - npm i -g @0x4447/avocado
       - npm i -g @0x4447/potato
   build:
     commands:
