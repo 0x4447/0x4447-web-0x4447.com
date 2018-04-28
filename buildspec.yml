@@ -20,10 +20,12 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - ls -la _input
+      - pwd
       - cd ..
+      - pwd
       - avocado -s 0x4447.com
-      - ls -la _input
-      - ls -la _output
+      - ls -la 0x4447.com/_input
+      - ls -la 0x4447.com/_output
   post_build:
     commands:
       - echo Entered the post_build phase...
