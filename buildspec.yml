@@ -23,6 +23,7 @@ phases:
       - pwd
       - cd ..
       - pwd
+      - ls -la
       - avocado -s 0x4447.com
       - ls -la 0x4447.com/_input
       - ls -la 0x4447.com/_output
