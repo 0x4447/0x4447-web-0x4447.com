@@ -82,33 +82,6 @@
 
 	<script>
 
-		//
-		//	Loop over all the menu items
-		//
-		$('.nav-link').each(function() {
-
-			//
-			//	1.	Get the href attribute of each menu element
-			//
-			let page = $(this).attr("href");
-
-			//
-			//	2.	Check if the href matches the active page
-			//
-			if(page == location.pathname)
-			{
-				//
-				//	1.	Activate the menu item
-				//
-				$(this).parent().addClass('active');
-			}
-
-		});
-
-	</script>
-
-	<script>
-
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
