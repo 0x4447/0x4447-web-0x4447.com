@@ -183,10 +183,19 @@
 			.fail(function(error) {
 
 				//
-				//	1.	Set the message error or use a default string if no
-				//		error message was passed.
+				//	1.	By default we assume we were unable to get an
+				//		error message
 				//
-				var message = error.responseJSON.message || "n/a";
+				var message = "Error: n/a";
+
+				//
+				//	2.	See if we can try to get a meaningful error
+				//		message.
+				//
+				if(error.responseJSON)
+				{
+					message = error.responseJSON.message;
+				}
 
 				//
 				//	->	Show the final message
