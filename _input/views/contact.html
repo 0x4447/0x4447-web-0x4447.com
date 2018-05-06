@@ -1,3 +1,5 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
 <div id="header">
 	<picture>
 		<source srcset="./assets/img/contact/header@1x.jpg 1x, ./assets/img/contact/header@2x.jpg 2x" />
@@ -31,17 +33,22 @@
 			<form>
 				<div class="form-group">
 					<label>Email address</label>
-					<input id="email_from" type="email" class="form-control" required>
+					<input id="from" type="email" class="form-control" required>
 				</div>
 
 				<div class="form-group">
 					<label for="exampleFormControlTextarea1">Your Message</label>
-					<textarea id="body" class="form-control" rows="10" required></textarea>
+					<textarea id="text" class="form-control" rows="10" required></textarea>
 				</div>
 			</form>
 
-			<button id="send" type="submit" class="btn btn-primary eggshell-background has-spinner">
-				<span class="spinner active"><i class="icon-spin icon-refresh"></i></span>
+			<div class="g-recaptcha"
+				data-sitekey="6LeZO1YUAAAAAM8s06P_eJshjAVh5E5_6FOOyIma"
+				data-callback="re_captcha"
+				data-size="invisible">
+			</div>
+
+			<button id="send" type="submit" class="btn btn-primary eggshell-background">
 				Send
 			</button>
 
@@ -53,10 +60,10 @@
 	<script>
 
 		//
-		//  1.  By default we assume that we are dealing with the staging
+		//  1.  By default we assume that we are dealing with the development
 		//      environment
 		//
-		var stage = 'production';
+		var stage = 'development';
 
 		//
 		//	2.	While developing we need the file extension
@@ -80,7 +87,7 @@
 		}
 
 		//
-		//	3.	React when the user wants to send the message
+		//	4.	React when the user wants to send the message
 		//
 		$('#send').on('click', function(event) {
 
@@ -88,48 +95,77 @@
 			//	1.	Prevent the form from default submit action
 			//
 			event.preventDefault();
+			event.stopPropagation();
 
 			//
-			//	2.	Remove the click listener so the user can't keep on clicking
+			//	2.	Before we do anything we check if the browser thinks the
+			//		form is valid.
+			//
+			if(!$('form')[0].checkValidity())
+			{
+				//
+				//	1.	Adda special class that will show all the errors on the
+				//		form.
+				//
+				$('form').addClass('was-validated');
+
+				//
+				//	->	Stop the execution of the code, since the form is
+				//		wrong.
+				//
+				return;
+			}
+
+			//
+			//	3.	Remove the click listener so the user can't keep on
+			//		clicking
 			//
 			$('#send').off('click');
 
 			//
-			//	3.	Replace the button txt to let the user know what is
+			//	4.	Replace the button txt to let the user know what is
 			//		happening
 			//
 			$('#send').text('Sending...');
 
 			//
-			//	4.	Visually disable all the elements of the form
+			//	5.	Visually disable all the elements of the form
 			//
+			$('#from').attr("disabled", true);
+			$('#text').attr("disabled", true);
 			$('#send').addClass("disabled");
-			$('#email_from').attr("disabled", true);
-			$('#body').attr("disabled", true);
 
 			//
-			//	5.	Get all the data that we need for the message
+			//	->	Execute the reCaptcha
 			//
-			var email_from 	= $('#email_from').val();
-			var body 		= $('#body').val();
+			grecaptcha.execute();
+
+		})
+
+		//
+		//	5.	Submit the form once Google gives the green light, meaning we
+		//		are dealing with a human... one hopes.
+		//
+		function re_captcha(recaptcha)
+		{
+			//
+			//	1.	Prepare the object with the data to be sent to the back end
+			//
+			var data = {
+				from: $('#from').val(),
+				text: $('#text').val(),
+				recaptcha: recaptcha
+			}
 
 			//
-			//	6.	Set the URL in a clear variable
+			//	2.	Set the URL in a clear variable
 			//
-			var url = 'https://api.0x4447.com/' + stage + '/email';
+			var url = 'https://api.0x4447.com/' + stage + '/contact';
 
 			//
-			//	7.	Prepare the data
+			//	3.	Make the request
 			//
-			var obj = JSON.stringify({
-				from: email_from,
-				text: body
-			});
-
-			//
-			//	8.	Make the request
-			//
-			$.post(url, obj)
+			$.post(url, JSON.stringify(data))
 			.done(function(response) {
 
 				//
@@ -141,24 +177,19 @@
 			.fail(function(error) {
 
 				//
-				//	1.	Convert the string in to a JS object
-				//
-				var parsed_error = JSON.parse(error.responseText);
-
-				//
-				//	2.	Set the message error or use a default string if no
+				//	1.	Set the message error or use a default string if no
 				//		error message was passed.
 				//
-				var message = parsed_error.message || "n/a";
+				var message = error.responseJSON.message || "n/a";
 
 				//
 				//	->	Show the final message
 				//
-				console.error("Error Message: " + message);
+				console.error(message);
 
 			});
 
-		});
+		}
 
 	</script>
 
