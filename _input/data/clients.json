@@ -31,9 +31,9 @@
 						"folder": "webcorp"
 					},
 					{
-						"name": "Spectral Paints",
-						"description": "Solutions for IoT management, logging, reporting and more.",
-						"folder": "spectralpaint"
+						"name": "Sparrow InterActive",
+						"description": "Sparrow aims to help small businesses manage their social media activity by making it easy to find quality content and build stories.",
+						"folder": "sparrow"
 					},
 					{
 						"name": "TemplarBit",
@@ -45,9 +45,9 @@
 			{
 				"data": [
 					{
-						"name": "Sparrow InterActive",
-						"description": "Sparrow aims to help small businesses manage their social media activity by making it easy to find quality content and build stories.",
-						"folder": "sparrow"
+						"name": "Spectral Paints",
+						"description": "Solutions for IoT management, logging, reporting and more.",
+						"folder": "spectralpaint"
 					},
 					{
 						"name": "Curious By Design",
