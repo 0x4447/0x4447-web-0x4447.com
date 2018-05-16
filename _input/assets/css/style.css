@@ -2,21 +2,14 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-/* latin */
 @font-face {
-	font-family: 'Roboto';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Roboto Light'), local('Roboto-Light'), url(./assets/font/Roboto-Light.ttf) format('ttf');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
-/* latin */
-@font-face {
-	font-family: 'Roboto';
+	font-family: 'Roboto Mono', monospace;
 	font-style: normal;
 	font-weight: 400;
-	src: local('Roboto'), local('Roboto-Regular'), url(./assets/font/Roboto-Regular.ttf) format('ttf');
+	src: local('RobotoMono-Regular'), local('RobotoMono-Regular'), url(./assets/font/RobotoMono-Regular.ttf) format('ttf');
+        src:    url(./assets/font/RobotoMono-Regular.eot) format('embedded-opentype'),
+        url(./assets/font/RobotoMono-Regular.woff) format('woff'),
+        url(./assets/font/RobotoMono-Regular.svg) format('svg');
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
