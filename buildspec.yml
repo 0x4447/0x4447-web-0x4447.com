@@ -11,7 +11,7 @@ phases:
       - echo Entered the install phase...
       - npm install
       - apt-get update
-      - apt-get imagemagick -y
+      - apt-get install imagemagick -y
   pre_build:
     commands:
       - echo Entered the pre_build phase...
