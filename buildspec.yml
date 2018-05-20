@@ -1,10 +1,5 @@
 version: 0.2
 
-env:
-  parameter-store:
-    ACCESS_KEY: "access_key"
-    SECRET_ACCESS_KEY: "secret_access_key"
-
 phases:
   install:
     commands:
