@@ -10,6 +10,8 @@ phases:
     commands:
       - echo Entered the install phase...
       - npm install
+      - apt-get update
+      - apt-get imagemagick -y
   pre_build:
     commands:
       - echo Entered the pre_build phase...
@@ -20,6 +22,7 @@ phases:
       - echo Entered the build phase...
       - echo Build started on `date`
       - avocado -s .
+      - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
       - echo Entered the post_build phase...
