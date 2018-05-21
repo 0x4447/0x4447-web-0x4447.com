@@ -77,6 +77,9 @@ body
 #header
 {
 	margin-bottom: 4rem;
+	position: relative;
+	overflow: hidden;
+    padding-bottom: 24.675rem;
 }
 
 .rounded-circle
@@ -122,6 +125,59 @@ body
 	letter-spacing: -.05rem;
 }
 
+
+
+
+/* Placeholder
+-------------------------------------------------- */
+
+#header .featurette-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.placeholder-masker {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: calc(100% - 1em);
+    max-height: calc(100% - 1em);
+    width: 1110px;
+    height: 24.675rem;
+    z-index: -1;
+}
+
+.placeholder-animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 2000px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -147,4 +203,30 @@ body
 	{
 		margin-top: 7rem;
 	}
+}
+
+@media (max-width: 75em) {
+    .placeholder-masker {
+        height: 20.675rem;
+    }
+}
+
+@media (max-width: 62em) {
+    .placeholder-masker {
+        height: 15.675rem;
+    }
+    
+    #header {
+        padding-bottom: 15.675rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .placeholder-masker {
+        height: 11.675rem;
+    }
+    
+    #header {
+        padding-bottom: 32vw;
+    }
 }
