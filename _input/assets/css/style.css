@@ -124,9 +124,8 @@ body
   height: 40px;
   text-align: justify;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-  min-width: 150px;
-  padding-left: 400px;
-  padding-right: 400px;
+  padding-left: 30%;
+  padding-right: 30%;
 }
 #badges a {
   width: 40px;
