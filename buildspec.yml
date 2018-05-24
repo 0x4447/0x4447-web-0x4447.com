@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - npm i -g @0x4447/avocado
+      - npm run build
       - npm i -g @0x4447/potato
   build:
     commands:
