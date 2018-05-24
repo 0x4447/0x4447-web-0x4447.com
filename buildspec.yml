@@ -10,13 +10,12 @@ phases:
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - npm run build
       - npm i -g @0x4447/potato
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
-      - avocado -s .
+      - npm run build
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
