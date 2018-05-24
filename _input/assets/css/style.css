@@ -117,6 +117,40 @@ body
 	border-top-color: #ffffff;
 }
 
+.footer-divider
+{
+	margin-top: 5em;
+	margin-bottom: 4em;
+}
+
+#badges {
+  height: 40px;
+  text-align: justify;
+  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+  padding-left: 30%;
+  padding-right: 30%;
+}
+#badges a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+#badges:after {
+  content: '';
+  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+  display: inline-block;
+}
+
+#copy {
+	margin-top: 40px;
+}
+
+#commit_id {
+	margin-top: 40px;
+}
+
+
 /* Thin out the marketing headings */
 .featurette-heading
 {
