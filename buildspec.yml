@@ -25,8 +25,8 @@ phases:
     commands:
       - echo Entered the post_build phase...
       - if $PULL_REQUEST; then
-          echo Site not deployed becasue this is a Pull Request.
+          echo Site not deployed becasue this is a Pull Request.;
         else
-          potato -s _output -u -b 0x4447.com
+          potato -s _output -u -b 0x4447.com;
         fi
       - echo Build completed on `date`.
