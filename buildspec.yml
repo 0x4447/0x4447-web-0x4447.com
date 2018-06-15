@@ -5,20 +5,28 @@ phases:
     commands:
       - echo Entered the install phase...
       - npm install
+      - npm i -g @0x4447/potato
       - apt-get update
       - apt-get install imagemagick -y
   pre_build:
     commands:
       - echo Entered the pre_build phase...
-      - npm i -g @0x4447/potato
+      - echo $CODEBUILD_SOURCE_VERSION
+      - PULL_REQUEST=true
+      - echo $CODEBUILD_SOURCE_VERSION | grep -q "pr" || PULL_REQUEST=false
   build:
     commands:
-      - echo Entered the build phase...
-      - echo Build started on `date`
+      - echo Entered the build phase on `date`...
+      - echo Building the site.
       - npm run build
+      - echo Converting all JPGs in to progressive JPGs.
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
       - echo Entered the post_build phase...
-      - potato -s _output -u -b 0x4447.com --access_key $ACCESS_KEY --secret_key $SECRET_ACCESS_KEY
-      - echo Build completed on `date`
+      - if $PULL_REQUEST; then
+          echo Site not deployed becasue this is a Pull Request.
+        else
+          potato -s _output -u -b 0x4447.com
+        fi
+      - echo Build completed on `date`.
