@@ -7,24 +7,29 @@
 			{
 				"data": [
 					{
-						"name": "Security7",
+						"name": "Security7 Network",
 						"description": "Security7 is a group of security professionals that strive to make security: affordable, scalable and reliable.",
+						"file": "security7"
+					},
+					{
+						"name": "Adbloom Inc.",
+						"description": "AdBloom is a Growth Marketing firm. They are a leading recruiter of Educators for the world's biggest EdTech firms.",
 						"file": "security7"
 					},
 					{
 						"name": "Tonic HQ",
 						"description": "Building your staffing business through process and technology.",
 						"file": "tonichq"
-					},
-					{
-						"name": "Dthera",
-						"description": "A digital therapeutics company focused on developing innovative quality of life therapies for the elderly and those suffering from cognitive decline.",
-						"file": "dthera"
 					}
 				]
 			},
 			{
 				"data": [
+					{
+						"name": "Dthera",
+						"description": "A digital therapeutics company focused on developing innovative quality of life therapies for the elderly and those suffering from cognitive decline.",
+						"file": "dthera"
+					},
 					{
 						"name": "Sequr",
 						"description": "Sequr provides a comprehensive solution for managing and controlling access to offices and buildings",
@@ -34,16 +39,16 @@
 						"name": "Webcorp",
 						"description": "WebCorp offers employers of all sizes an affordable Cloud-based job application form and applicant tracking system.",
 						"file": "webcorp"
-					},
-					{
-						"name": "Sparrow InterActive",
-						"description": "Sparrow aims to help small businesses manage their social media activity by making it easy to find quality content and build stories.",
-						"file": "sparrow"
 					}
 				]
 			},
 			{
 				"data": [
+					{
+						"name": "Sparrow InterActive",
+						"description": "Sparrow aims to help small businesses manage their social media activity by making it easy to find quality content and build stories.",
+						"file": "sparrow"
+					},
 					{
 						"name": "TemplarBit",
 						"description": "The most effective way to protect your applications from malicious activity.",
@@ -53,7 +58,11 @@
 						"name": "Spectral Paints",
 						"description": "Solutions for IoT management, logging, reporting and more.",
 						"file": "spectralpaint"
-					},
+					}
+				]
+			},
+			{
+				"data": [
 					{
 						"name": "Curious By Design",
 						"description": "Trading in a modern world.",
@@ -61,6 +70,7 @@
 					}
 				]
 			}
+
 		]
 	}
 }
