@@ -12,8 +12,13 @@
     "url": "https://github.com/0x4447/0x4447.com/issues"
   },
   "homepage": "https://github.com/0x4447/0x4447.com#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://davidgatti@github.com/0x4447/0x4447.com.git"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@0x4447/avocado": "^1.3.0",
+    "@0x4447/avocado": "1.4.0",
     "ncp": "^2.0.0",
     "recursive-readdir": "^2.2.2"
   }
