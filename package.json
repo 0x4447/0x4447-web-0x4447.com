@@ -18,8 +18,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@0x4447/avocado": "git://github.com/0x4447/0x4447-cli-node-avocado/commit/148bb332ea7df3889ac1a2340ff30f95e9922da4",
+    "@0x4447/avocado": "0x4447/0x4447-cli-node-avocado#fix-skipping-files",
     "ncp": "2.0.0",
-    "recursive-readdir": "2.2.2"
+    "recursive-readdir": "^2.2.2"
   }
 }
