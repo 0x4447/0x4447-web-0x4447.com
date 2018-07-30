@@ -4,6 +4,7 @@
   "description": "The official Homepage of 0x4447.com",
   "main": "home.js",
   "scripts": {
+    "build": "avocado -s .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "0x4447",
