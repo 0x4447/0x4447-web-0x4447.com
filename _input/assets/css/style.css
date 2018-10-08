@@ -253,6 +253,10 @@ a:hover {
 }
 
 @media (max-width: 48em) {
+	#send {
+		width: 100%;
+	}
+
     .placeholder-masker {
         height: 11.675rem;
     }
