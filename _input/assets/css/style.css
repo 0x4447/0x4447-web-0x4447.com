@@ -208,6 +208,11 @@ a:hover {
     height: 100%;
 }
 
+.grecaptcha-badge {
+	position: relative;
+	top: 15px;
+	left: 0;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
