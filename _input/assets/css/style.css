@@ -79,6 +79,10 @@ html, body
 	font-weight: 100;
 }
 
+a:hover {
+	color: #007bff;
+}
+
 #header
 {
 	margin-bottom: 4rem;
