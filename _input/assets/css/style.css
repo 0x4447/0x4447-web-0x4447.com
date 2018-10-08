@@ -82,6 +82,10 @@ body
     padding-bottom: 24.675rem;
 }
 
+#menu-button {
+	font-size: 1.375rem;
+}
+
 .rounded-circle
 {
 	margin-bottom: 15px;
@@ -233,7 +237,7 @@ body
     .placeholder-masker {
         height: 15.675rem;
     }
-    
+
     #header {
         padding-bottom: 15.675rem;
     }
@@ -243,7 +247,7 @@ body
     .placeholder-masker {
         height: 11.675rem;
     }
-    
+
     #header {
         padding-bottom: 32vw;
     }
