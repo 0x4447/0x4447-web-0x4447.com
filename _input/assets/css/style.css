@@ -91,6 +91,10 @@ a:hover {
     padding-bottom: 24.675rem;
 }
 
+#home_header_logo {
+	width: 13rem;
+}
+
 .rounded-circle
 {
 	margin-bottom: 15px;
