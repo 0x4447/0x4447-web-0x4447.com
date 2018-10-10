@@ -226,12 +226,13 @@ body
 	{
 		margin-top: 7rem;
 	}
+
 }
 
 @media (max-width: 75em) {
     .placeholder-masker {
         height: 20.675rem;
-    }
+	}
 }
 
 @media (max-width: 62em) {
@@ -252,4 +253,14 @@ body
     #header {
         padding-bottom: 32vw;
     }
+}
+
+/* MEDIUM DEVICES (TABLETS, LESS THAN 992px) */
+@media (max-width: 991.98px) {
+	.navbar-nav {
+		flex-direction: column !important;
+		align-items: center;
+		padding-right: 0;
+		padding-top: .5rem;
+	}
 }
