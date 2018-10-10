@@ -272,5 +272,10 @@ a:hover {
 
     #header {
         padding-bottom: 32vw;
-    }
+	}
+
+	.featurette-divider {
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+	}
 }
