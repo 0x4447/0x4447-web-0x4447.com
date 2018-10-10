@@ -125,6 +125,16 @@ a:hover {
 	margin-left: .75rem;
 }
 
+.linked-tile {
+	color: rgb(33, 37, 41);
+	text-decoration: none;
+}
+
+.linked-tile:hover {
+	color: rgb(33, 37, 41);
+	text-decoration: none;
+}
+
 /* Featurettes
 ------------------------- */
 
