@@ -96,15 +96,22 @@ $.each($(".navbar-link"), function() {
 	//
 	//	1. Get HREF attribute of the element.
 	//
-	let href = '/' + $(this).attr('href');
+	let href = $(this).attr('href');
 
 	//
-	//	2. Get the current path of the window.
+	//	2. Change variable if it's not '/'
+	//
+	if (href !== '/') {
+		href = '/' + href
+	}
+
+	//
+	//	3. Get the current path of the window.
 	//
 	let current_path = window.location.pathname
 
 	//
-	//	3. Check if the HREF matches the current path
+	//	4. Check if the HREF matches the current path
 	//
 	if(href === current_path) {
 
