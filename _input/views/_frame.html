@@ -94,14 +94,16 @@
 $.each($(".navbar-link"), function() {
 
 	//
-	//	1. Get HREF attribute of the element.
+	//	1. Get HREF attribute of the menu item that was clicked.
 	//
 	let href = $(this).attr('href');
 
 	//
-	//	2. Change variable if it's not '/'
+	//	2. Check if we are dealing with the home menu item. since this is
+	//		an edge case that we have to consider.
 	//
-	if (href !== '/') {
+	if(href !== '/')
+	{
 		href = '/' + href
 	}
 
@@ -111,12 +113,13 @@ $.each($(".navbar-link"), function() {
 	let current_path = window.location.pathname
 
 	//
-	//	4. Check if the HREF matches the current path
+	//	4. Check if the HREF matches the current path.
 	//
-	if(href === current_path) {
-
+	if(href === current_path)
+	{
 		//
-		//	Add the `active-link` to lighten font weight
+		//	Add the `active-link` to lighten font weight this way we can
+		//	visual show the active page.
 		//
 		$(this).addClass('active-link');
 	}
