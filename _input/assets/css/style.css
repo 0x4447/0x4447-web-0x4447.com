@@ -200,6 +200,15 @@ body
     height: 100%;
 }
 
+/* OVERWRITES
+-------------------------------------------------- */
+
+/*
+	Remove the border from the Nav button when on mobile
+ */
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
