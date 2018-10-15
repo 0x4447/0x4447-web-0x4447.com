@@ -132,13 +132,22 @@ html, body
 	margin-bottom: 4em;
 }
 
+.vr {
+	border-left: 1px solid rgb(226, 226, 226);
+	position: relative;
+	height: 9rem;
+	top: -70px;
+}
+
 .site-map-text {
 	font-size: .55rem;
 	margin-left: 4rem;
+	margin-right: 4rem;
 }
 
 .site-map-link {
-	margin-left: 4rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
 	line-height: .6rem;
 }
 
@@ -146,8 +155,10 @@ html, body
   height: 40px;
   text-align: justify;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100%;
+  max-width: 30rem;
 }
 #badges a {
   width: 40px;
@@ -255,7 +266,12 @@ html, body
 
     #header {
         padding-bottom: 15.675rem;
-    }
+	}
+
+	.footer-divider {
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
 }
 
 @media (max-width: 48em) {
