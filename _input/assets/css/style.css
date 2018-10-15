@@ -141,13 +141,11 @@ html, body
 
 .site-map-text {
 	font-size: .55rem;
-	margin-left: 4rem;
-	margin-right: 4rem;
+	margin: 0 4rem;
 }
 
 .site-map-link {
-	margin-left: 1rem;
-	margin-right: 1rem;
+	margin: 0 1rem;
 	line-height: .6rem;
 }
 
