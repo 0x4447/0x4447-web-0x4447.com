@@ -1,8 +1,8 @@
-<div class="container mt-5 mb-5 pb-5">
+<div class="container mt-5 mb-5 pb-5 full-screen">
 	<div class="row d-flex justify-content-center">
-		<div class="col-12 col-md-11 col-lg-6 d-flex flex-column justify-content-center mt-5">
+		<div class="col-12 col-md-11 col-lg-6 d-flex flex-column justify-content-center mt-5" id="home_header">
 			<img class="mx-auto" src="./assets/img/_global/company_logo_rectangle.svg" id="home_header_logo" alt="logo" />
-			<p class="pt-3 text-center lead">We build software with solid foundations to provide flexible solutions that are easily modified and extended.</p>
+			<p class="pt-3 text-center home-header-text">We build software with solid foundations to provide flexible solutions that are easily modified and extended.</p>
 		</div>
 	</div>
 </div>
@@ -96,3 +96,27 @@
 	<p>Now that you know a little bit more about what we can do, check out <a href="about.html">why we do what we do</a>.</p>
 
 </div>
+
+<script>
+
+//
+//	Get the document when it is ready.
+//
+$(document).ready(function() {
+
+	//
+	//	Listen for when the user scrolls.
+	//
+    $(window).scroll(function() {
+
+		//
+		//	Adjust the opacity of the `home_header` to fade to 0 as the user
+		//	scrolls down.
+		//
+		$("#home_header").css(
+			"opacity",
+			1 - $(window).scrollTop() / $('#home_header').height());
+    });
+});
+
+</script>
