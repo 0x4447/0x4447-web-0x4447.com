@@ -134,14 +134,14 @@ a:hover {
 	margin-left: .75rem;
 }
 
-.linked-tile {
-	color: rgb(33, 37, 41);
-	text-decoration: none;
+.hover-link-container a {
+	position: relative;
+	visibility: hidden;
+	margin: 0 -10px;
 }
 
-.linked-tile:hover {
-	color: rgb(33, 37, 41);
-	text-decoration: none;
+.hover-link-container:hover a {
+	visibility: visible;
 }
 
 /* Featurettes
@@ -213,9 +213,6 @@ a:hover {
 	line-height: 1;
 	letter-spacing: -.05rem;
 }
-
-
-
 
 /* Placeholder
 -------------------------------------------------- */
@@ -333,6 +330,7 @@ a:hover {
 		margin-top: .5rem;
 		margin-bottom: .5rem;
 	}
+
 }
 
 /* MEDIUM DEVICES (TABLETS, LESS THAN 992px) */
@@ -343,4 +341,5 @@ a:hover {
 		padding-right: 0;
 		padding-top: .5rem;
 	}
+
 }
