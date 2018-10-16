@@ -155,16 +155,35 @@ a:hover {
 
 .footer-divider
 {
-	margin-top: 5em;
+	margin-top: 4em;
 	margin-bottom: 4em;
+}
+
+.vr {
+	border-left: 1px solid rgb(226, 226, 226);
+	position: relative;
+	height: 9rem;
+	top: -70px;
+}
+
+.site-map-text {
+	font-size: .55rem;
+	margin: 0 4rem;
+}
+
+.site-map-link {
+	margin: 0 1rem;
+	line-height: .6rem;
 }
 
 #badges {
   height: 40px;
   text-align: justify;
   font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: 100%;
+  max-width: 30rem;
 }
 #badges a {
   width: 40px;
@@ -289,7 +308,12 @@ a:hover {
 
     #header {
         padding-bottom: 15.675rem;
-    }
+	}
+
+	.footer-divider {
+		margin-top: 3em;
+		margin-bottom: 3em;
+	}
 }
 
 @media (max-width: 48em) {
