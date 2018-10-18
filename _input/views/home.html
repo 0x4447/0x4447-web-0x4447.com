@@ -114,32 +114,33 @@
 //
 //	Shows a `div` containing a scrolling icon for 2 seconds.
 //
-function showIconForTwoSeconds() {
+function show_icon_for_two_seconds() {
 
 	//
-	//	Fade in the icon.
+	//	1.	Fade in the icon.
 	//
 	$('#icon-scroll').fadeIn();
 
 	//
-	//	Set a timer for 2 seconds.
+	//	2.	Set a timer for 2 seconds.
 	//
 	setTimeout(function() {
 
 		//
-		//	Fade out the icon after 2 seconds.
+		//	1.	Fade out the icon after 2 seconds.
 		//
 		$('#icon-scroll').fadeOut();
 
 	}, 2000)
 
 	//
-	//	Listen for if the window starts scrolling
+	//	3.	Listen for if the window starts scrolling, so we can hide the
+	//		icon. this way we live the user with a clean UI.
 	//
 	$(window).scroll(function() {
 
 		//
-		//	Hide the icon if the window scrolls
+		//	4.	Hide the icon if the window scrolls.
 		//
 		$('#icon-scroll').fadeOut();
 
@@ -147,22 +148,25 @@ function showIconForTwoSeconds() {
 }
 
 //
-//	Set a timer for 1 second
+//	Set a timer for 1 second after which we will display a scrolling
+//	animation to help the user know that they can scroll the page down
+//	to get more content.
 //
 setTimeout(function() {
 
 	//
-	//	Check if the window has been scrolled from the top after 1
-	//	second.
+	//	1.	Check if the window has been scrolled from the top after 1
+	//		second.
 	//
-	if (!$(window).scrollTop())
+	if(!$(window).scrollTop())
 	{
 
 		//
-		//	Call function to show the icon for 2 seconds.
+		//	1.	Call function to show the icon for 2 seconds.
 		//
-		showIconForTwoSeconds();
+		show_icon_for_two_seconds();
 	}
+
 }, 1000);
 
 </script>
