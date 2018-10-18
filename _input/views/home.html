@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="row d-flex position-relative icon-scroll-row">
-		<div class='icon-scroll'></div>
+		<div class="icon-scroll" id="icon-scroll"></div>
 	</div>
 </div>
 
@@ -108,3 +108,61 @@
 	<p>Now that you know a little bit more about what we can do, check out <a href="about.html">why we do what we do</a>.</p>
 
 </div>
+
+<script>
+
+//
+//	Shows a `div` containing a scrolling icon for 2 seconds.
+//
+function showIconForTwoSeconds() {
+
+	//
+	//	Fade in the icon.
+	//
+	$('#icon-scroll').fadeIn();
+
+	//
+	//	Set a timer for 2 seconds.
+	//
+	setTimeout(function() {
+
+		//
+		//	Fade out the icon after 2 seconds.
+		//
+		$('#icon-scroll').fadeOut();
+
+	}, 2000)
+
+	//
+	//	Listen for if the window starts scrolling
+	//
+	$(window).scroll(function() {
+
+		//
+		//	Hide the icon if the window scrolls
+		//
+		$('#icon-scroll').fadeOut();
+
+	});
+}
+
+//
+//	Set a timer for 1 second
+//
+setTimeout(function() {
+
+	//
+	//	Check if the window has been scrolled from the top after 1
+	//	second.
+	//
+	if (!$(window).scrollTop())
+	{
+
+		//
+		//	Call function to show the icon for 2 seconds.
+		//
+		showIconForTwoSeconds();
+	}
+}, 1000);
+
+</script>
