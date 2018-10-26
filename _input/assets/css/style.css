@@ -412,6 +412,13 @@ a:hover {
 
 }
 
+/* EXTRA SMALL DEVICES (PORTRAIT PHONES, LESS THAN 576px) */
+@media (max-width: 575.98px) {
+	.navbar, .navbar-toggler {
+		padding-top: 0;
+	}
+}
+
 /* MEDIUM DEVICES (TABLETS, LESS THAN 992px) */
 @media (max-width: 991.98px) {
 	.navbar-nav {
