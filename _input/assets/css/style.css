@@ -4,289 +4,311 @@
 
 /* roboto-mono-100 - latin */
 @font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 100;
-	src: url('../font/roboto-mono-v5-latin-100.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Mono Thin'), local('RobotoMono-Thin'),
-	url('../font/roboto-mono-v5-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../font/roboto-mono-v5-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../font/roboto-mono-v5-latin-100.woff') format('woff'), /* Modern Browsers */
-	url('../font/roboto-mono-v5-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../font/roboto-mono-v5-latin-100.svg#RobotoMono') format('svg'); /* Legacy iOS */
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../font/roboto-mono-v5-latin-100.eot"); /* IE9 Compat Modes */
+    src: local("Roboto Mono Thin"), local("RobotoMono-Thin"),
+        url("../font/roboto-mono-v5-latin-100.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../font/roboto-mono-v5-latin-100.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../font/roboto-mono-v5-latin-100.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../font/roboto-mono-v5-latin-100.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../font/roboto-mono-v5-latin-100.svg#RobotoMono") format("svg"); /* Legacy iOS */
 }
 
-  /* roboto-mono-300 - latin */
-  @font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 300;
-	src: url('../font/roboto-mono-v5-latin-300.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Mono Light'), local('RobotoMono-Light'),
-	url('../font/roboto-mono-v5-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../font/roboto-mono-v5-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../font/roboto-mono-v5-latin-300.woff') format('woff'), /* Modern Browsers */
-	url('../font/roboto-mono-v5-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../font/roboto-mono-v5-latin-300.svg#RobotoMono') format('svg'); /* Legacy iOS */
+/* roboto-mono-300 - latin */
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../font/roboto-mono-v5-latin-300.eot"); /* IE9 Compat Modes */
+    src: local("Roboto Mono Light"), local("RobotoMono-Light"),
+        url("../font/roboto-mono-v5-latin-300.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../font/roboto-mono-v5-latin-300.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../font/roboto-mono-v5-latin-300.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../font/roboto-mono-v5-latin-300.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../font/roboto-mono-v5-latin-300.svg#RobotoMono") format("svg"); /* Legacy iOS */
 }
 
-  /* roboto-mono-regular - latin */
-  @font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../font/roboto-mono-v5-latin-regular.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Mono'), local('RobotoMono-Regular'),
-	url('../font/roboto-mono-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../font/roboto-mono-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../font/roboto-mono-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-	url('../font/roboto-mono-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../font/roboto-mono-v5-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
+/* roboto-mono-regular - latin */
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../font/roboto-mono-v5-latin-regular.eot"); /* IE9 Compat Modes */
+    src: local("Roboto Mono"), local("RobotoMono-Regular"),
+        url("../font/roboto-mono-v5-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../font/roboto-mono-v5-latin-regular.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */
+            url("../font/roboto-mono-v5-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../font/roboto-mono-v5-latin-regular.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../font/roboto-mono-v5-latin-regular.svg#RobotoMono")
+            format("svg"); /* Legacy iOS */
 }
 
-  /* roboto-mono-500 - latin */
-  @font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 500;
-	src: url('../font/roboto-mono-v5-latin-500.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Mono Medium'), local('RobotoMono-Medium'),
-	url('../font/roboto-mono-v5-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../font/roboto-mono-v5-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../font/roboto-mono-v5-latin-500.woff') format('woff'), /* Modern Browsers */
-	url('../font/roboto-mono-v5-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../font/roboto-mono-v5-latin-500.svg#RobotoMono') format('svg'); /* Legacy iOS */
+/* roboto-mono-500 - latin */
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../font/roboto-mono-v5-latin-500.eot"); /* IE9 Compat Modes */
+    src: local("Roboto Mono Medium"), local("RobotoMono-Medium"),
+        url("../font/roboto-mono-v5-latin-500.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../font/roboto-mono-v5-latin-500.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../font/roboto-mono-v5-latin-500.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../font/roboto-mono-v5-latin-500.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../font/roboto-mono-v5-latin-500.svg#RobotoMono") format("svg"); /* Legacy iOS */
 }
 
-  /* roboto-mono-700 - latin */
-  @font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 700;
-	src: url('../font/roboto-mono-v5-latin-700.eot'); /* IE9 Compat Modes */
-	src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-	url('../font/roboto-mono-v5-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	url('../font/roboto-mono-v5-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-	url('../font/roboto-mono-v5-latin-700.woff') format('woff'), /* Modern Browsers */
-	url('../font/roboto-mono-v5-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-	url('../font/roboto-mono-v5-latin-700.svg#RobotoMono') format('svg'); /* Legacy iOS */
+/* roboto-mono-700 - latin */
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../font/roboto-mono-v5-latin-700.eot"); /* IE9 Compat Modes */
+    src: local("Roboto Mono Bold"), local("RobotoMono-Bold"),
+        url("../font/roboto-mono-v5-latin-700.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../font/roboto-mono-v5-latin-700.woff2")
+            format("woff2"),
+        /* Super Modern Browsers */ url("../font/roboto-mono-v5-latin-700.woff")
+            format("woff"),
+        /* Modern Browsers */ url("../font/roboto-mono-v5-latin-700.ttf")
+            format("truetype"),
+        /* Safari, Android, iOS */
+            url("../font/roboto-mono-v5-latin-700.svg#RobotoMono") format("svg"); /* Legacy iOS */
 }
 
-html, body
-{
-	font-family: 'Roboto Mono', monospace;
-	padding-bottom: 3rem;
-	font-weight: 300;
+html,
+body {
+    font-family: "Roboto Mono", monospace;
+    padding-bottom: 3rem;
+    font-weight: 300;
 }
 
 a:hover {
-	color: #007bff;
+    color: #007bff;
 }
 
-#header
-{
-	margin-bottom: 4rem;
-	position: relative;
-	overflow: hidden;
+#header {
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
     padding-bottom: 24.675rem;
 }
 
 #menu-button {
-	font-size: 1.375rem;
-	color: #007bff;
+    font-size: 1.375rem;
+    color: #007bff;
 }
 
-.rounded-circle
-{
-	margin-bottom: 15px;
+.rounded-circle {
+    margin-bottom: 15px;
 }
 
 .lead {
-	font-weight: 300;
+    font-weight: 300;
 }
 
 .active-link {
-	font-weight: 100 !important;
+    font-weight: 100 !important;
 }
 
 .navbar-link {
-	font-weight: 300;
+    font-weight: 300;
 }
 
-.full-screen {
-	min-height: calc(100vh - 40px);
+.full-screen-container {
+    min-height: calc(100vh - 56px);
+}
+
+.full-height-row {
+    min-height: 100vh;
 }
 
 #home_header_logo {
-	max-width: 30rem;
+    max-width: 30rem;
 }
 
 .home-header-text {
-	font-size: 1.75rem;
+    font-size: 1.75rem;
 }
 
 /* Scrolling icon
 -------------------------------------------------- */
 
 #icon-scroll {
-	display: none;
+    display: none;
 }
 
 .icon-scroll-row {
-	height: 70px;
-	margin-bottom: 5vh;
+    height: 70px;
+    margin-bottom: 5vh;
 }
 
-.icon-scroll, .icon-scroll:before {
-	position: absolute;
-	left: 50%;
-	top: 0;
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%;
+    top: 0;
 }
 .icon-scroll {
-	width: 40px;
-	height: 70px;
-	margin-left: -20px;
-	box-shadow: inset 0 0 0 1px rgb(33, 37, 41);
-	border-radius: 25px;
+    width: 40px;
+    height: 70px;
+    margin-left: -20px;
+    box-shadow: inset 0 0 0 1px rgb(33, 37, 41);
+    border-radius: 25px;
 }
 
 .icon-scroll:before {
-	content: '';
-	width: 8px;
-	height: 8px;
-	background: rgb(33, 37, 41);
-	margin-left: -4px;
-	top: 8px;
-	border-radius: 4px;
-	-webkit-animation-duration: 1.5s;
-			animation-duration: 1.5s;
-	-webkit-animation-iteration-count: infinite;
-			animation-iteration-count: infinite;
-	-webkit-animation-name: scroll;
-			animation-name: scroll;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: rgb(33, 37, 41);
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
 }
 
 @-webkit-keyframes scroll {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-webkit-transform: translateY(46px);
-				transform: translateY(46px);
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px);
+    }
 }
 
 @keyframes scroll {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-		-webkit-transform: translateY(46px);
-				transform: translateY(46px);
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(46px);
+        transform: translateY(46px);
+    }
 }
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4
-{
-	margin-bottom: 1.5rem;
-	text-align: center;
+.marketing .col-lg-4 {
+    /* margin-bottom: 1.5rem; */
+    text-align: center;
 }
 
-.marketing h2
-{
-	font-weight: 400;
+.marketing h2 {
+    font-weight: 400;
 }
 
-.marketing .col-lg-4 p
-{
-	margin-right: .75rem;
-	margin-left: .75rem;
+.marketing .col-lg-4 p {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
 }
 
 .hover-link-container a {
-	position: relative;
-	visibility: hidden;
-	margin: 0 -10px;
+    position: relative;
+    visibility: hidden;
+    margin: 0 -10px;
 }
 
 .hover-link-container:hover a {
-	visibility: visible;
+    visibility: visible;
 }
 
 /* Featurettes
 ------------------------- */
 
-.featurette-divider
-{
-	margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-	border-top-color: #ffffff;
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    border-top-color: #ffffff;
 }
 
-.footer-divider
-{
-	margin-top: 4em;
-	margin-bottom: 4em;
+.footer-divider {
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .vr {
-	border-left: 1px solid rgb(226, 226, 226);
-	position: relative;
-	height: 9rem;
-	top: -70px;
+    border-left: 1px solid rgb(226, 226, 226);
+    position: relative;
+    height: 9rem;
+    top: -70px;
 }
 
 .site-map-text {
-	font-size: .55rem;
-	margin: 0 4rem;
+    font-size: 0.55rem;
+    margin: 0 4rem;
 }
 
 .site-map-link {
-	margin: 0 1rem;
-	line-height: .6rem;
+    margin: 0 1rem;
+    line-height: 0.6rem;
 }
 
 #badges {
-  height: 40px;
-  text-align: justify;
-  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-  padding-right: 4rem;
-  padding-left: 4rem;
-  width: 100%;
-  max-width: 30rem;
+    height: 40px;
+    text-align: justify;
+    font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+    padding-right: 4rem;
+    padding-left: 4rem;
+    width: 100%;
+    max-width: 30rem;
 }
 #badges a {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
 }
 
 #badges:after {
-  content: '';
-  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-  display: inline-block;
+    content: "";
+    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block;
 }
 
 #copy {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
 #commit_id {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
-
 /* Thin out the marketing headings */
-.featurette-heading
-{
-	font-weight: 300;
-	line-height: 1;
-	letter-spacing: -.05rem;
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05rem;
 }
 
 /* Placeholder
@@ -322,7 +344,6 @@ a:hover {
     height: 100%;
 }
 
-
 /* OVERWRITES
 -------------------------------------------------- */
 
@@ -334,43 +355,37 @@ a:hover {
 }
 
 .grecaptcha-badge {
-	position: relative;
-	top: 15px;
-	left: 0;
+    position: relative;
+    top: 15px;
+    left: 0;
 }
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em)
-{
-	/* Bump up size of carousel content */
-	.carousel-caption p
-	{
-		margin-bottom: 1.25rem;
-		font-size: 1.25rem;
-		line-height: 1.4;
-	}
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
 
-	.featurette-heading
-	{
-		font-size: 50px;
-	}
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
 
-@media (min-width: 62em)
-{
-	.featurette-heading
-	{
-		margin-top: 7rem;
-	}
-
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
 }
 
 @media (max-width: 75em) {
     .placeholder-masker {
         height: 20.675rem;
-	}
+    }
 }
 
 @media (max-width: 62em) {
@@ -380,18 +395,18 @@ a:hover {
 
     #header {
         padding-bottom: 15.675rem;
-	}
+    }
 
-	.footer-divider {
-		margin-top: 3em;
-		margin-bottom: 3em;
-	}
+    .footer-divider {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
 }
 
 @media (max-width: 48em) {
-	#send {
-		width: 100%;
-	}
+    #send {
+        width: 100%;
+    }
 
     .placeholder-masker {
         height: 11.675rem;
@@ -399,33 +414,48 @@ a:hover {
 
     #header {
         padding-bottom: 32vw;
-	}
+    }
 
-	.featurette-divider {
-		margin-top: .5rem;
-		margin-bottom: .5rem;
-	}
+    .featurette-divider {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 
-	.home-header-text {
-		font-size: 1.25rem;
-	}
-
+    .home-header-text {
+        font-size: 1.25rem;
+    }
 }
 
-/* EXTRA SMALL DEVICES (PORTRAIT PHONES, LESS THAN 576px) */
+/* EXTRA SMALL DEVICES (PORTRAIT PHONES, LESS THAN 576PX) */
 @media (max-width: 575.98px) {
-	.navbar, .navbar-toggler {
-		padding-top: 0;
-	}
+    .navbar,
+    .navbar-toggler {
+        padding-top: 0;
+    }
+
+    .full-screen-container {
+        min-height: calc(100vh - 36px);
+    }
 }
 
-/* MEDIUM DEVICES (TABLETS, LESS THAN 992px) */
-@media (max-width: 991.98px) {
-	.navbar-nav {
-		flex-direction: column !important;
-		align-items: center;
-		padding-right: 0;
-		padding-top: .5rem;
-	}
+/* SMALL TO MEDIUM DEVICES (LANDSCAPE PHONES AND TABLETS, 576PX AND UP) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .full-screen-container {
+        min-height: calc(100vh - 48px);
+    }
+}
 
+/* MEDIUM DEVICES (TABLETS, LESS THAN 992PX) */
+@media (max-width: 991.98px) {
+    .full-height-row {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;
+        align-items: center;
+        padding-right: 0;
+        padding-top: 0.5rem;
+    }
 }
