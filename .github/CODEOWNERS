@@ -1,9 +1,4 @@
 #
-#	Default code owner
+#	 Owner of the repo
 #
 * @davidgatti
-
-#
-#	Owner of CSS files.
-#
-*.css    @radiantdinosaurs
