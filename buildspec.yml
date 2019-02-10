@@ -14,6 +14,6 @@ phases:
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
-      - aws s3 cp ./_output/* s3://0x4447-webpage-home
+      - aws s3 cp ./_output s3://0x4447-webpage-home --recursive
 
 
