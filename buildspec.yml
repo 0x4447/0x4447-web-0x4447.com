@@ -8,12 +8,12 @@ phases:
       - apt-get install imagemagick -y
   build:
     commands:
-      - echo Building the site using Avocado
+      - echo "Building the site using Avocado."
       - npm run build
-      - echo Converting all JPGs in to progressive JPGs.
+      - echo "Converting all JPGs in to progressive JPGs."
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
-      - aws s3 cp ./_output s3://0x4447-webpage-home --recursive
+      - potato -s _output -u -b 0x4447-webpage-hom
 
 
