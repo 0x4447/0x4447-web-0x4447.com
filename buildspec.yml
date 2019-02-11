@@ -14,6 +14,6 @@ phases:
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
-      - potato -s _output -u -b 0x4447-webpage-hom
+      - ./node_modules/.bin/potato -s _output -u -b 0x4447-webpage-hom
 
 
