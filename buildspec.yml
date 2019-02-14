@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo "Building the site using Avocado."
-      - 'echo "{\"contact_function_name\": \"$CONTACT_FORM_NAME\", \"aws_region\": \"$AWS_REGION\", \"identity_pool_Id\": \"$IDENTITY_POOL_ID\"}" > env.json'
+      - 'echo "{\"contact_function_name\": \"$CONTACT_FORM_NAME\", \"aws_region\": \"$AWS_REGION\", \"identity_pool_id\": \"$IDENTITY_POOL_ID\"}" > env.json'
       - npm run build
       - echo "Converting all JPGs in to progressive JPGs."
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
