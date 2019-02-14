@@ -12,6 +12,7 @@ phases:
       - npm run build
       - echo "Converting all JPGs in to progressive JPGs."
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
+      'echo "{\"contact_function_name\": \"$CONTACT_FORM_NAME\", \"aws_region\": \"$AWS_REGION\", \"identity_pool_Id\": \"$IDENTITY_POOL_ID\"}" > env.json'
   post_build:
     commands:
       - ./node_modules/.bin/potato -s _output -u -b $S3_BUCKET
