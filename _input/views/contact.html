@@ -1,4 +1,4 @@
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="./assets/js/aws-sdk-2.404.0.min.js"></script>
 
 <div id="header" class="container">
 	<picture>
@@ -55,47 +55,30 @@
 				Send
 			</button>
 
-			<div class="g-recaptcha"
-			data-sitekey="6LeZO1YUAAAAAM8s06P_eJshjAVh5E5_6FOOyIma"
-			data-callback="re_captcha"
-			data-size="invisible"
-			data-badge="inline">
-			</div>
-
 		</div>
 	</div>
 
 	<script>
 
 		//
-		//  1.  By default we assume that we are dealing with the development
-		//      environment
+		//	Get temporary credentials from AWS.
 		//
-		var stage = 'development';
+		AWS.config.update({
+			region: '{{aws_region}}',
+			credentials: new AWS.CognitoIdentityCredentials({
+				IdentityPoolId: '{{identity_pool_id}}'
+			})
+		});
 
 		//
-		//	2.	While developing we need the file extension
+		//	Initialize Lambda
 		//
-		var extension = '.html';
+		let lambda = new AWS.Lambda({
+			apiVersion: '2015-03-31'
+		});
 
 		//
-		//  3.  Check if we are in production
-		//
-		if(document.location.hostname == '0x4447.com')
-		{
-			//
-			//  1.  Switch to production
-			//
-			stage = 'production';
-
-			//
-			//	2.	When in production we remove the extension
-			//
-			extension = '';
-		}
-
-		//
-		//	4.	React when the user wants to send the message
+		//	1.	React when the user wants to send the message
 		//
 		$('#send').on('click', function(event) {
 
@@ -144,68 +127,54 @@
 			$('#send').addClass("disabled");
 
 			//
-			//	->	Execute the reCaptcha
+			//	->	Send the email.
 			//
-			grecaptcha.execute();
+			send_email();
 
 		})
 
 		//
-		//	5.	Submit the form once Google gives the green light, meaning we
-		//		are dealing with a human... one hopes.
+		//	Submit the form once Google gives the green light, meaning we
+		//	are dealing with a human... one hopes.
 		//
-		function re_captcha(recaptcha)
+		function send_email()
 		{
 			//
-			//	1.	Prepare the object with the data to be sent to the back end
+			//	1.	Prepare the object with the data to be sent to the back end.
 			//
-			var data = {
+			let data = {
 				from: $('#from').val(),
-				text: $('#text').val(),
-				recaptcha: recaptcha
+				text: $('#text').val()
 			}
 
 			//
-			//	2.	Set the URL in a clear variable
+			//	2.	Prepare the query.
 			//
-			var url = 'https://api.0x4447.com/' + stage + '/contact';
+			let params = {
+				FunctionName: "{{contact_function_name}}",
+				Payload: JSON.stringify(data)
+			};
 
 			//
-			//	3.	Make the request
+			//	->	Execute the query.
 			//
-			$.post(url, JSON.stringify(data))
-			.done(function(response) {
+			lambda.invoke(params, function(error, data) {
+
+				//
+				//	1.	Check for internal error.
+				//
+				if(error)
+				{
+					console.info(params);
+					return console.error(error);
+				}
 
 				//
 				//	->	Redirect to the thank you page
 				//
-				window.location = 'thankyou' + extension;
+				window.location = 'thankyou';
 
-			})
-			.fail(function(error) {
-
-				//
-				//	1.	By default we assume we were unable to get an
-				//		error message
-				//
-				var message = "Error: n/a";
-
-				//
-				//	2.	See if we can try to get a meaningful error
-				//		message.
-				//
-				if(error.responseJSON)
-				{
-					message = error.responseJSON.message;
-				}
-
-				//
-				//	->	Show the final message
-				//
-				console.error(message);
-
-			});
-
+ 			});
 		}
 
 	</script>

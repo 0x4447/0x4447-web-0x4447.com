@@ -17,9 +17,8 @@
     "url": "git+https://davidgatti@github.com/0x4447/0x4447.com.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "@0x4447/avocado": "1.4.2",
-    "ncp": "2.0.0",
-    "recursive-readdir": "^2.2.2"
+  "devDependencies": {
+    "@0x4447/avocado": "1.7.0",
+    "@0x4447/potato": "2.4.7"
   }
 }
