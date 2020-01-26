@@ -15,6 +15,7 @@ phases:
       - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
+      - aws s3 rm --recursive s3://$S3_BUCKET
       - ./node_modules/.bin/potato -s _output -u -b $S3_BUCKET
 
 
