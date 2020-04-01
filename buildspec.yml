@@ -2,20 +2,18 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      ruby: 2.6
     commands:
-      - npm install
-      - apt-get update
-      - apt-get install imagemagick -y
+      - gem install bundler
+  pre_build:
+    commands:
+      - bundle install
   build:
     commands:
-      - echo "Building the site using Avocado."
-      - 'echo "{\"contact_function_name\": \"$LAMBDA_FORM_CONTACT\", \"aws_region\": \"$AWS_REGION\", \"identity_pool_id\": \"$IDENTITY_POOL_ID\"}" > env.json'
-      - npm run build
-      - echo "Converting all JPGs in to progressive JPGs."
-      - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
+      - bundle exec jekyll build
   post_build:
     commands:
       - aws s3 rm --recursive s3://$S3_BUCKET
-      - ./node_modules/.bin/potato -s _output -u -b $S3_BUCKET
-
-
+      - aws s3 cp ./_site s3://$S3_BUCKET --recursive
+      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
