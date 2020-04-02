@@ -1,0 +1,347 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Patient, Respect, Mindfulness, 0x4447, projects, aws, heroku, github, software development, design">
+		<meta name="author" content="0x4447 LLC">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/assets/manifest.json">
+		<link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#807a00">
+		<meta name="apple-mobile-web-app-title" content="0x4447 LLC">
+		<meta name="application-name" content="0x4447 LLC">
+		<meta name="msapplication-TileColor" content="#ffc40d">
+		<meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
+		<meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<meta property="og:image" content="https://0x4447.com/assets/img/home/og.jpg">
+		<meta property="og:image:width" content="1103">
+		<meta property="og:image:height" content="577">
+		<meta property="og:url" content="https://0x4447.com/home">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="0x4447, LLC.">
+		<meta property="og:description" content="We build software with solid foundations to provide flexible solutions that are easily modified and extended.">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="@dawidgatti">
+		<meta name="twitter:image" content="https://0x4447.com/assets/img/home/og.jpg">
+		<meta name="twitter:title" content="0x4447, LLC.">
+		<meta name="twitter:description" content="We build software with solid foundations to provide flexible solutions that are easily modified and extended.">
+
+		<title>0x4447, LLC. - Contact</title>
+		<meta name="description" content="We build software with solid foundations to provide flexible solutions that are easily modified and extended.">
+
+		<script crossorigin="anonymous" src="/assets/js/jquery-3.2.1.min.js"></script>
+
+		<link rel="stylesheet" href="/assets/css/bootstrap-v4.0.0.min.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+
+	<body>
+
+		<header>
+			<nav class="navbar navbar-light navbar-expand-lg site-header sticky-top d-flex justify-content-end">
+				<button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span id="menu-button">Menu</span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto container d-flex flex-column flex-md-row justify-content-between">
+						<li class="nav-item"> <a class="navbar-link py-2 d-md-inline-block" href="/">Home</a> </li>
+						<li class="nav-item"> <a class="navbar-link py-2 d-md-inline-block" href="about">About</a> </li>
+						<li class="nav-item"> <a class="navbar-link py-2 d-md-inline-block" href="clients">Clients</a> </li>
+						<li class="nav-item"> <a class="navbar-link py-2 d-md-inline-block" href="toolbox">Toolbox</a> </li>
+						<li class="nav-item"> <a class="navbar-link py-2 d-md-inline-block" href="contact">Contact</a> </li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main role="main">
+
+			<script src="./assets/js/aws-sdk-2.404.0.min.js"></script>
+
+			<div id="header" class="container">
+				<picture>
+					<source srcset="./assets/img/contact/header@1x.jpg 1x, ./assets/img/contact/header@2x.jpg 2x" />
+					<img class="featurette-image img-fluid mx-auto" src="./assets/img/contact/header@1x.jpg" alt="0x4447, LLC. - Contact" />
+					<div class="placeholder-masker">
+						<div class="placeholder-animated-background"></div>
+					</div>
+				</picture>
+			</div>
+
+			<div class="container marketing">
+
+				<h1>Feel Free to Contact Us</h1>
+
+				<p>Please don't hesitate to contact us if you have an idea; if you need help in one specific field or with a certain portion of your project; or if you'd like us to help you build a solution from the ground up. And let's not think about cost right now. Let's see if we want to work together first, and the rest will fall into place on its own.</p>
+
+				<hr class="featurette-divider">
+
+				<div class="row">
+
+					<div class="col">
+						<address>
+							<strong>0x4447™, LLC.</strong><br>
+							8 The Green STE 7254<br>
+							Dover, DE 19901<br>
+							United States<br>
+							<br>
+							Phone: <a href="tel:+1 (866) 838-8203‬‬">+1 (866) 838-8203</a>
+						</address>
+					</div>
+
+					<div class="col-12 col-md-9">
+
+						<form>
+							<div class="form-group">
+								<label>Email address</label>
+								<input id="from" type="email" class="form-control" required>
+								<div class="invalid-feedback">
+									There is something wrong with the email.
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1">Your Message</label>
+								<textarea id="text" class="form-control" rows="10" required></textarea>
+								<div class="invalid-feedback">
+									Don't forget to write your message.
+								</div>
+							</div>
+						</form>
+
+						<button id="send" type="submit" class="btn btn-primary eggshell-background">
+							Send
+						</button>
+
+					</div>
+				</div>
+
+				<script>
+
+				
+				
+				
+					AWS.config.update({
+						region: '',
+						credentials: new AWS.CognitoIdentityCredentials({
+							IdentityPoolId: ''
+						})
+					});
+
+				
+				
+				
+					let lambda = new AWS.Lambda({
+						apiVersion: '2015-03-31'
+					});
+
+				
+				
+				
+					$('#send').on('click', function(event) {
+
+					
+					
+					
+						event.preventDefault();
+						event.stopPropagation();
+
+					
+					
+					
+					
+						if(!$('form')[0].checkValidity())
+						{
+						
+						
+						
+						
+							$('form').addClass('was-validated');
+
+						
+						
+						
+						
+							return;
+						}
+
+					
+					
+					
+					
+						$('#send').off('click');
+
+					
+					
+					
+					
+						$('#send').text('Sending...');
+
+					
+					
+					
+						$('#from').attr("disabled", true);
+						$('#text').attr("disabled", true);
+						$('#send').addClass("disabled");
+
+					
+					
+					
+						send_email();
+
+					})
+
+				
+				
+				
+				
+					function send_email()
+					{
+					
+					
+					
+						let data = {
+							from: $('#from').val(),
+							text: $('#text').val()
+						}
+
+					
+					
+					
+						let params = {
+							FunctionName: "",
+							Payload: JSON.stringify(data)
+						};
+
+					
+					
+					
+						lambda.invoke(params, function(error, data) {
+
+						
+						
+						
+							if(error)
+							{
+								console.info(params);
+								return console.error(error);
+							}
+
+						
+						
+						
+							window.location = 'thankyou';
+
+			 			});
+					}
+
+				</script>
+
+				<script type="application/ld+json">
+					{
+						"@context": "http://schema.org",
+						"@type": "Organization",
+						"url": "https://0x4447.com",
+						"name": "0x4447, LLC.",
+						"contactPoint": {
+							"@type": "ContactPoint",
+							"telephone": "+1 (866) 838-8203‬",
+							"contactType": "Customer service"
+						}
+					}
+				</script>
+
+			</div>
+
+			<script>
+				function show_icon_for_two_seconds() {
+					$('#icon-scroll').fadeIn();
+					setTimeout(function () {
+						$('#icon-scroll').fadeOut();
+					}, 2000)
+					$(window).scroll(function () {
+						$('#icon-scroll').fadeOut();
+					});
+				}
+				setTimeout(function () {
+					if (!$(window).scrollTop()) {
+						show_icon_for_two_seconds();
+					}
+				}, 1000);
+			</script>
+
+			<footer class="container text-center">
+
+				<div class="row">
+
+					<div class="col">
+
+						<hr class="footer-divider">
+
+						<div class="row d-flex align-items-center">
+
+							<div class="col-12 col-md-4 text-center text-md-left">
+								<p class="site-map-text">Site Map:</p>
+								<p class="site-map-link"> <a class="site-map-text" href="/">Home</a> </p>
+								<p class="site-map-link"> <a class="site-map-text" href="about">About</a> </p>
+								<p class="site-map-link"> <a class="site-map-text" href="clients">Clients</a> </p>
+								<p class="site-map-link"> <a class="site-map-text" href="toolbox">Toolbox</a> </p>
+								<p class="site-map-link"> <a class="site-map-text" href="contact">Contact</a> </p>
+
+							</div>
+
+							<div class="col-12 d-md-none">
+								<hr class="footer-divider">
+							</div>
+
+							<div class="col-1 d-none d-md-block position-relative">
+								<div class="vr position-absolute"></div>
+							</div>
+
+							<div class="col d-flex justify-content-end">
+
+								<p id="badges">
+									<a target="_blank" href="https://www.npmjs.com/org/0x4447"><img width="40" width="40" src="./assets/img/global/npm.svg" alt="npm" /></a>
+									<a target="_blank" href="https://github.com/0x4447"><img width="40" width="40" src="./assets/img/global/github.svg" alt="GitHub" /></a>
+									<a target="_blank" href="https://travis-ci.org/0x4447"><img width="40" width="40" src="./assets/img/global/travisci.svg" alt="Travis" /></a>
+								</p>
+
+							</div>
+
+						</div>
+
+						<hr class="footer-divider">
+
+						<p id="copy">Est.2016, Copr.<a href="/">0x4447</a>™ LLC.</p>
+						<p id="commit_id"><a class="text-muted" target="_blank" href="https://github.com/0x4447/0x4447.com/commit/14b3553ba12fc2353ace3091ae73e6e04909cb9c">14b3553</a></p>
+					</div>
+
+				</div>
+
+			</footer>
+
+		</main>
+
+<script>
+$.each($(".navbar-link"), function() {
+	let href = $(this).attr('href');
+	if(href !== '/')
+	{
+		href = '/' + href
+	}
+	let current_path = window.location.pathname
+	if(href === current_path)
+	{
+		$(this).addClass('active-link');
+	}
+});
+</script>
+	</body>
+	<script crossorigin="anonymous" src="/assets/js/popper-1.13.0.min.js"></script>
+	<script crossorigin="anonymous" src="/assets/js/bootstrap-v4.0.0.min.js"></script>
+</html>
