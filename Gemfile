@@ -8,6 +8,8 @@ gem "jekyll"
 
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
-  gem 'jekyll-feed'
+  gem 'jekyll-feed' 
+  gem 'jekyll-environment-variables'
   gem 'jekyll-seo-tag'
+  gem "jekyll-contentful-data-import"
 end
