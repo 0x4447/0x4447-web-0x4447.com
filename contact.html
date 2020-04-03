@@ -70,9 +70,9 @@ title: Contact
 				
 				
 					AWS.config.update({
-						region: {{ site.env.AWS_REGION }},
+						region: "{{ site.env.AWS_REGION }}",
 						credentials: new AWS.CognitoIdentityCredentials({
-							IdentityPoolId: {{ site.env.IDENTITY_POOL_ID}}
+							IdentityPoolId: "{{ site.env.IDENTITY_POOL_ID}}"
 						})
 					});
 
@@ -157,7 +157,7 @@ title: Contact
 					
 					
 						let params = {
-							FunctionName {{ site.env.LAMBDA_FORM_CONTACT }}: ,
+							FunctionName: "{{ site.env.LAMBDA_FORM_CONTACT }}",
 							Payload: JSON.stringify(data)
 						};
 
