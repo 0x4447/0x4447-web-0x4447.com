@@ -8,6 +8,7 @@ phases:
       - echo LAMBDA_FORM_CONTACT=$LAMBDA_FORM_CONTACT >> .env
       - echo AWS_REGION=$AWS_REGION >> .env
       - echo IDENTITY_POOL_ID=$IDENTITY_POOL_ID >> .env
+      - echo DISTRIBUTION_ID=$DISTRIBUTION_ID >> .env
       - gem install bundler
   pre_build:
     commands:
