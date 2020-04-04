@@ -1,7 +1,7 @@
-*/.DS_Store
-*.DS_Store
-/_output
-/node_modules
-/_input/*.html
-_preview
-/env.json
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+**/*.DS_Store
+node_modules
