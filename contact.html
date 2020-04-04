@@ -1,0 +1,202 @@
+---
+layout: default
+title: Contact
+---
+		<main role="main">
+
+			<script src="./assets/js/aws-sdk-2.404.0.min.js"></script>
+
+			<div id="header" class="container">
+				<picture>
+					<source srcset="./assets/img/contact/header@1x.jpg 1x, ./assets/img/contact/header@2x.jpg 2x" />
+					<img class="featurette-image img-fluid mx-auto" src="./assets/img/contact/header@1x.jpg" alt="0x4447, LLC. - Contact" />
+					<div class="placeholder-masker">
+						<div class="placeholder-animated-background"></div>
+					</div>
+				</picture>
+			</div>
+
+			<div class="container marketing">
+
+				<h1>Feel Free to Contact Us</h1>
+
+				<p>Please don't hesitate to contact us if you have an idea; if you need help in one specific field or with a certain portion of your project; or if you'd like us to help you build a solution from the ground up. And let's not think about cost right now. Let's see if we want to work together first, and the rest will fall into place on its own.</p>
+
+				<hr class="featurette-divider">
+
+				<div class="row">
+
+					<div class="col">
+						<address>
+							<strong>0x4447™, LLC.</strong><br>
+							8 The Green STE 7254<br>
+							Dover, DE 19901<br>
+							United States<br>
+							<br>
+							Phone: <a href="tel:+1 (866) 838-8203‬‬">+1 (866) 838-8203</a>
+						</address>
+					</div>
+
+					<div class="col-12 col-md-9">
+
+						<form>
+							<div class="form-group">
+								<label>Email address</label>
+								<input id="from" type="email" class="form-control" required>
+								<div class="invalid-feedback">
+									There is something wrong with the email.
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="exampleFormControlTextarea1">Your Message</label>
+								<textarea id="text" class="form-control" rows="10" required></textarea>
+								<div class="invalid-feedback">
+									Don't forget to write your message.
+								</div>
+							</div>
+						</form>
+
+						<button id="send" type="submit" class="btn btn-primary eggshell-background">
+							Send
+						</button>
+
+					</div>
+				</div>
+
+				<script>
+
+				
+				
+				
+					AWS.config.update({
+						region: "{{ site.env.AWS_REGION }}",
+						credentials: new AWS.CognitoIdentityCredentials({
+							IdentityPoolId: "{{ site.env.IDENTITY_POOL_ID}}"
+						})
+					});
+
+				
+				
+				
+					let lambda = new AWS.Lambda({
+						apiVersion: '2015-03-31'	
+					});
+
+				
+				
+				
+					$('#send').on('click', function(event) {
+
+					
+					
+					
+						event.preventDefault();
+						event.stopPropagation();
+
+					
+					
+					
+					
+						if(!$('form')[0].checkValidity())
+						{
+						
+						
+						
+						
+							$('form').addClass('was-validated');
+
+						
+						
+						
+						
+							return;
+						}
+
+					
+					
+					
+					
+						$('#send').off('click');
+
+					
+					
+					
+					
+						$('#send').text('Sending...');
+
+					
+					
+					
+						$('#from').attr("disabled", true);
+						$('#text').attr("disabled", true);
+						$('#send').addClass("disabled");
+
+					
+					
+					
+						send_email();
+
+					})
+
+				
+				
+				
+				
+					function send_email()
+					{
+					
+					
+					
+						let data = {
+							from: $('#from').val(),
+							text: $('#text').val()
+						}
+
+					
+					
+					
+						let params = {
+							FunctionName: "{{ site.env.LAMBDA_FORM_CONTACT }}",
+							Payload: JSON.stringify(data)
+						};
+
+					
+					
+					
+						lambda.invoke(params, function(error, data) {
+
+						
+						
+						
+							if(error)
+							{
+								console.info(params);
+								return console.error(error);
+							}
+
+						
+						
+						
+							window.location = 'thankyou';
+
+			 			});
+					}
+
+				</script>
+
+				<script type="application/ld+json">
+					{
+						"@context": "http://schema.org",
+						"@type": "Organization",
+						"url": "https://0x4447.com",
+						"name": "0x4447, LLC.",
+						"contactPoint": {
+							"@type": "ContactPoint",
+							"telephone": "+1 (866) 838-8203‬",
+							"contactType": "Customer service"
+						}
+					}
+				</script>
+
+			</div>
