@@ -110,10 +110,8 @@ a:hover {
 }
 
 #header {
-    margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
-    padding-bottom: 24.675rem;
 }
 
 #menu-button {
@@ -315,11 +313,6 @@ a:hover {
 -------------------------------------------------- */
 
 #header .featurette-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 .placeholder-masker {
@@ -393,10 +386,6 @@ a:hover {
         height: 15.675rem;
     }
 
-    #header {
-        padding-bottom: 15.675rem;
-    }
-
     .footer-divider {
         margin-top: 3em;
         margin-bottom: 3em;
@@ -410,10 +399,6 @@ a:hover {
 
     .placeholder-masker {
         height: 11.675rem;
-    }
-
-    #header {
-        padding-bottom: 32vw;
     }
 
     .featurette-divider {
