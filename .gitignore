@@ -8,3 +8,4 @@ node_modules
 .jekyll-cache/*
 assets/img/.DS_Store
 .DS_Store
+.DS_Store
