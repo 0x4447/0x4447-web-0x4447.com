@@ -1,44 +1,44 @@
 - name: "Retireryte"
   description: "A new product to help financial advisors create better retirement plans for their investors."
-  logo: "/assets/img/clients/logos/retireryte"
+  logo: "retireryte"
 
 - name: "Security7 Networks"
   description:  "Security7 is a group of security professionals that strive to make security: affordable, scalable and reliable."
-  logo: "/assets/img/clients/logos/security7"
+  logo: "security7"
 
 - name: "Adbloom Inc."
   description:  "AdBloom is a Growth Marketing firm. They are a leading recruiter of Educators for the world's biggest EdTech firms."
-  logo: "/assets/img/clients/logos/adbloom"
+  logo: "adbloom"
 
 - name: "Tonic HQ"
   description:  "Building your staffing business through process and technology."
-  logo: "/assets/img/clients/logos/tonichq"
+  logo: "tonichq"
 
 - name: "Dthera"
   description:  "A digital therapeutics company focused on developing innovative quality of life therapies for the elderly and those suffering from cognitive decline."
-  logo: "/assets/img/clients/logos/dthera"
+  logo: "dthera"
 
 - name: "Sequr"
   description:  "Sequr provides a comprehensive solution for managing and controlling access to offices and buildings"
-  logo: "/assets/img/clients/logos/sequr"
+  logo: "sequr"
 
 - name: "Webcorp"
   description:  "WebCorp offers employers of all sizes an affordable Cloud-based job application form and applicant tracking system."
-  logo: "/assets/img/clients/logos/webcorp"
+  logo: "webcorp"
 
 - name: "Sparrow InterActive"
   description:  "Sparrow aims to help small businesses manage their social media activity by making it easy to find quality content and build stories."
-  logo: "/assets/img/clients/logos/sparrow"
+  logo: "sparrow"
 
 - name: "TemplarBit"
   description:  "The most effective way to protect your applications from malicious activity."
-  logo: "/assets/img/clients/logos/templarbit"
+  logo: "templarbit"
 
 - name: "Spectral Paints"
   description:  "Solutions for IoT management, logging, reporting and more."
-  logo: "/assets/img/clients/logos/spectralpaint"
+  logo: "spectralpaint"
 
 - name: "Curious By Design"
   description:  "Trading in a modern world."
-  logo: "/assets/img/clients/logos/curiousbydesign"
+  logo: "curiousbydesign"
   

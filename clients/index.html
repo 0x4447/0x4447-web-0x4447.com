@@ -28,7 +28,7 @@ meta_img: '/assets/img/clients/og.png'
 					{% for client in site.data.clients %}
 					<div class="col-lg-4">
 						<picture class="rounded-circle">
-							<source srcset="{{ client.logo }}@1x.jpg 1x, {{ client.logo }}@2x.jpg 2x" />
+							<source srcset="/assets/img/clients/logos/{{ client.logo }}@1x.jpg 1x, {{ client.logo }}@2x.jpg 2x" />
 							<img src="{{ client.logo }}e@1x.jpg" width="140" height="140" alt="{{ client.name }}"/>
 						</picture>
 						<h2>{{ client.name }}</h2>
