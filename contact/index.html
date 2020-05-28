@@ -58,9 +58,11 @@ meta_img: '/assets/img/contact/og.png'
 								</div>
 							</div>
 						</form>
-
-						<button id="send" type="submit" class="btn btn-primary eggshell-background">
-							Send
+						<button id="submit" type="submit" class="btn btn-primary eggshell-background">
+							<div class="spinner-border text-light" hidden id="loading" style="width:1.3rem;height:1.3rem;" role="status">
+								<span class="sr-only"></span>
+							</div>
+							<span id="send">Send</span>
 						</button>
 
 					</div>
@@ -88,7 +90,7 @@ meta_img: '/assets/img/contact/og.png'
 				
 				
 				
-					$('#send').on('click', function(event) {
+					$('#submit').on('click', function(event) {
 
 					
 					
@@ -119,12 +121,12 @@ meta_img: '/assets/img/contact/og.png'
 					
 					
 					
-						$('#send').off('click');
+						$('#submit').off('click');
 
 					
 					
 					
-					
+						document.getElementById('loading').hidden = false;
 						$('#send').text('Sending...');
 
 					
@@ -132,7 +134,7 @@ meta_img: '/assets/img/contact/og.png'
 					
 						$('#from').attr("disabled", true);
 						$('#text').attr("disabled", true);
-						$('#send').addClass("disabled");
+						$('#submit').addClass("disabled");
 
 					
 					
