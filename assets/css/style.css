@@ -252,8 +252,8 @@ a:hover {
 }
 
 .footer-divider {
-    margin-top: 4em;
-    margin-bottom: 4em;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .vr {
@@ -264,21 +264,41 @@ a:hover {
 }
 
 .site-map-text {
-    font-size: 0.55rem;
-    margin: 0 4rem;
+    text-align:left;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.5 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .site-map-link {
-    margin: 0 1rem;
-    line-height: 0.6rem;
+    text-align:left;
+    margin: 0.5 1rem;
+    line-height: 1.4rem;
 }
+
+/* -- tolgaouzz -- */
+
+
+/* footer */
+.social-badge{
+    display:inline-block;
+    padding: 0 3.5rem 0 0;
+}
+
+.social-badge img{
+    width: 30px;
+    height: 30px;
+}
+
+/* -- tolgaouzz -- */
 
 #badges {
     height: 40px;
     text-align: justify;
     font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
     width: 100%;
     max-width: 30rem;
 }
