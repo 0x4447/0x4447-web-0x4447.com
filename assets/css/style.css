@@ -267,13 +267,13 @@ a:hover {
     text-align:left;
     font-weight: 700;
     font-size: 0.85rem;
-    padding: 0.5 1rem;
+    padding: 0.5;
     margin-bottom: 0.5rem;
 }
 
 .site-map-link {
     text-align:left;
-    margin: 0.5 1rem;
+    margin: 0 0rem;
     line-height: 1.4rem;
 }
 
@@ -283,7 +283,7 @@ a:hover {
 /* footer */
 .social-badge{
     display:inline-block;
-    padding: 0 3.5rem 0 0;
+    padding: 0 0 0 0;
 }
 
 .social-badge img{
