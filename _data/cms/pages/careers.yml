@@ -1,0 +1,84 @@
+hero:
+  headline: AAA
+  subheadline: BBB
+  background-image: /theme/0x4548/assets/img/covers/cover-5.jpg
+  cta:
+    text: DDD
+    a:
+      href: EEE
+      title: FFF
+values:
+  tag: GGG
+  headline: III
+  blurb: HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH HHH
+  photos:
+    one:
+      src: /theme/0x4548/assets/img/photos/photo-13.jpg
+      alt: JJJ
+    two:
+      src: /theme/0x4548/assets/img/photos/photo-14.jpg
+      alt: KKK
+    three:
+      src: /theme/0x4548/assets/img/photos/photo-15.jpg
+      alt: LLL
+benefits:
+  tag: MMM
+  headline: NNN
+  blurb: OOO OOO OOO OOO
+  list:
+    - key: PPP
+      value: QQQ
+    - key: RRR
+      value: SSS
+    - key: TTT
+      value: UUU
+    - key: VVV
+      value: WWW
+break:
+  background-image: /theme/0x4548/assets/img/covers/cover-4.jpg
+applying:
+  tag: XXX
+  headline: YYY
+  blurb: ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ ZZZ
+  table:
+    headline: AAA
+    blurb: BBB
+    footer: ZZZ
+    columns:
+      one: CCC
+      two: DDD
+      three: EEE
+    jobs:
+      - headline: FFF
+        blurb: GGG
+        a:
+          href: HHH
+          title: III
+        field2: JJJ
+        field3: KKK
+      - headline: LLL
+        blurb: MMM
+        a:
+          href: NNN
+          title: OOO
+        field2: PPP
+        field3: QQQ
+      - headline: RRR
+        blurb: SSS
+        a:
+          href: TTT
+          title: UUU
+        field2: VVV
+        field3: WWW
+testimonial:
+  headline: 111
+  blurb: 222
+  hero:
+    img:
+      src: /theme/0x4548/assets/img/photos/photo-1.jpg
+      alt: 777
+    a:
+      href: 666
+      title: 555
+  quote: 888
+  person: 999

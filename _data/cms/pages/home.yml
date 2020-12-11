@@ -1,0 +1,87 @@
+hero:
+  tag: ZZZ
+  headline: AAA
+  subheadline: BBB
+  background-image: /theme/0x4548/assets/img/covers/cover-5.jpg
+  cta:
+    text: DDD
+    a:
+      href: EEE
+      title: FFF
+steps:
+  video: /theme/0x4548/assets/video/video-1.mp4
+  illustration:
+    src: /theme/0x4548/assets/img/illustrations/illustration-1-dark.png
+    alt: GGG
+  headline: HHH
+  blurb: III
+  list:
+    one:
+      number: X
+      headline: JJJ
+      blurb: KKK
+    two:
+      number: Y
+      headline: LLL
+      blurb: MMM
+    three:
+      number: Z
+      headline: NNN
+      blurb: OOO
+integrations:
+  tag: ZZZ
+  headline: AAA
+  subheadline: BBB
+download:
+  headline: CCC
+  subheadline: DDD
+  background-image: /theme/0x4548/assets/img/covers/cover-18.jpg
+  buttons:
+    one:
+      a:
+        href: XXX
+        title: YYY
+      img:
+        src: /theme/0x4548/assets/img/buttons/button-app.png
+        alt: AAA
+    two:
+      a:
+        href: BBB
+        title: CCC
+      img:
+        src: /theme/0x4548/assets/img/buttons/button-play.png
+        alt: EEE
+cta:
+  headline: PPP
+  subheadline: QQQ
+  cta:
+    text: RRR
+    a:
+      href: SSS
+      title: TTT
+about:
+  headline: UUU
+  blurb: VVV
+  screenshots:
+    one:
+      src: /theme/0x4548/assets/img/screenshots/ui/analytics-2.png
+      alt: 111
+    two:
+      src: /theme/0x4548/assets/img/screenshots/ui/analytics-1.png
+      alt: 222
+    three:
+      src: /theme/0x4548/assets/img/screenshots/ui/analytics-3.png
+      alt: 333
+  benefits:
+    one: WWW
+    two: XXX
+    three: YYY
+    four: ZZZ
+access:
+  headline: AAA
+  blurb: BBB
+  cta:
+    text: RRR
+    a:
+      href: SSS
+      title: TTT

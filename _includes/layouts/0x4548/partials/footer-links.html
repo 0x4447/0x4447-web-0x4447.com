@@ -1,0 +1,7 @@
+{% for f in include.links %}
+    <li class="mb-3">
+        <a href="{{ f.a.href }}" title="{{ f.a.title }}" class="text-reset">
+            {{ f.text}}
+        </a>
+    </li>
+{% endfor %}

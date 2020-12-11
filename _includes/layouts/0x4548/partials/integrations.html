@@ -1,0 +1,16 @@
+{% for integration in site.data.integrations %}
+    <div class="col-12 col-md-6 col-lg-4 text-center">
+        
+        <!-- Icon -->
+        <div class="icon icon-lg mb-4">
+            <img class="img-fluid" src="{{ integration.img.src }}" alt="{{ integration.img.alt }}" />
+        </div>
+
+        <!-- Heading -->
+        <h3 class="font-weight-bold text-white">{{ integration.title }}</h3>
+
+        <!-- Text -->
+        <p class="text-muted mb-8">{{ integration.description }}</p>
+
+    </div>
+{% endfor %}

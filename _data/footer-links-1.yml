@@ -1,0 +1,22 @@
+headline: 10
+links:
+  - text: Support
+    a:
+      href: https://support.0x4447.com/
+      title: TODO
+  - text: Pay
+    a:
+      href: https://pay.0x4447.com/
+      title: TODO
+  - text: Foundation
+    a:
+      href: https://foundation.0x4447.com/
+      title: TODO
+  - text: Documentation
+    a:
+      href: https://documentation.0x4447.com/
+      title: TODO
+  - text: Front Porch
+    a:
+      href: https://frontporch.0x4447.com/
+      title: TODO

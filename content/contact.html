@@ -1,0 +1,200 @@
+---
+layout: '0x4548'
+permalink: /contact.html
+title: Contact
+navOrder: 30
+theme:
+    body:
+        class: 'pt-10 bg-light'
+    navbar:
+        class: 'navbar-light fixed-top bg-white border-bottom'
+        container: 'container-fluid'
+    footer:
+        class: 'bg-dark'
+---
+
+{% assign cms = site.data.cms.pages.contact %}
+
+<!-- WELCOME
+    ================================================== -->
+    <section class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover" style="background-image: url({{ cms.hero.background-image }});">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+              
+              <!-- Heading -->
+              <h1 class="display-2 font-weight-bold text-white">
+                {{ cms.hero.headline }}
+              </h1>
+  
+              <!-- Text -->
+              <p class="lead text-white-75 mb-0">
+                {{ cms.hero.subheadline }}
+              </p>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- SHAPE
+      ================================================== -->
+      <div class="position-relative">
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+          {% include layouts/0x4548/assets/img/shapes/curves/curve-1.svg %}
+        </div>
+      </div>
+  
+      <!-- INFO
+      ================================================== -->
+      <section class="py-7 py-md-9 border-bottom border-gray-300" id="info">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              
+              <!-- Button -->
+              <a href="#info" class="btn btn-white btn-rounded-circle shadow mt-n11 mt-md-n13" data-toggle="smooth-scroll">
+                <i class="fe fe-arrow-down"></i>
+              </a>
+  
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12 col-md-4 text-center border-right border-gray-300">
+              
+              <!-- Heading -->
+              <h6 class="text-uppercase text-gray-700 mb-1">
+                {{ cms.details.chat.headline }}
+              </h6>
+  
+              <!-- Link -->
+              <div class="mb-5 mb-md-0">
+                <a href="{{ cms.details.chat.a.href }}" class="h4 text-primary" title="{{ cms.details.chat.a.title }}">
+                  {{ cms.details.chat.a.text }}
+                </a>
+              </div>
+  
+            </div>
+            <div class="col-12 col-md-4 text-center border-right border-gray-300">
+              
+              <!-- Heading -->
+              <h6 class="text-uppercase text-gray-700 mb-1">
+                {{ cms.details.call.headline }}
+              </h6>
+  
+              <!-- Link -->
+              <div class="mb-5 mb-md-0">
+                <a href="{{ cms.details.call.a.href }}" class="h4" title="{{ cms.details.call.a.title }}">
+                  {{ cms.details.call.a.text }}
+                </a>
+              </div>
+  
+            </div>
+            <div class="col-12 col-md-4 text-center">
+              
+              <!-- Heading -->
+              <h6 class="text-uppercase text-gray-700 mb-1">
+                {{ cms.details.email.headline }}
+              </h6>
+  
+              <!-- Link -->
+              <a href="{{ cms.details.email.a.href }}" class="h4" title="{{ cms.details.email.a.title }}">
+                {{ cms.details.email.a.text }}
+              </a>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div>
+      </section>
+  
+      <!-- FORM
+      ================================================== -->
+      <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+              
+              <!-- Heading -->
+              <h2 class="font-weight-bold">
+                {{ cms.form.headline }}
+              </h2>
+  
+              <!-- Text -->
+              <p class="font-size-lg text-muted mb-7 mb-md-9">
+                {{ cms.form.subheadline }}
+              </p>
+  
+            </div>
+          </div> <!-- / .row -->
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-lg-10">
+              
+              <!-- Form -->
+              <form>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group mb-5">
+                      
+                      <!-- Label -->
+                      <label for="contactName">
+                        {{ cms.form.fields.name.label }}
+                      </label>
+  
+                      <!-- Input -->
+                      <input type="text" class="form-control" id="contactName" placeholder="{{ cms.form.fields.name.placeholder }}">
+  
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="form-group mb-5">
+                      
+                      <!-- Label -->
+                      <label for="contactEmail">
+                        {{ cms.form.fields.email.label }}
+                      </label>
+  
+                      <!-- Input -->
+                      <input type="email" class="form-control" id="contactEmail" placeholder="{{ cms.form.fields.email.placeholder }}">
+  
+                    </div>
+                  </div>
+                </div> <!-- / .row -->
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group mb-7 mb-md-9">
+                      
+                      <!-- Label -->
+                      <label for="contactMessage">
+                        {{ cms.form.fields.message.label }}
+                      </label>
+  
+                      <!-- Input -->
+                      <textarea class="form-control" id="contactMessage" rows="5" placeholder="{{ cms.form.fields.message.placeholder }}"></textarea>
+  
+                    </div>
+                  </div>
+                </div> <!-- / .row -->
+                <div class="row justify-content-center">
+                  <div class="col-auto">
+                    
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn-primary lift">
+                      {{ cms.form.submit }}
+                    </button>
+  
+                  </div>
+                </div> <!-- / .row -->
+              </form>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- SHAPE
+      ================================================== -->
+      <div class="position-relative">
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+          {% include layouts/0x4548/assets/img/shapes/curves/curve-1.svg %}
+        </div>
+      </div>

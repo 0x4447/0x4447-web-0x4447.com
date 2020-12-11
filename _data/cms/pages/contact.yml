@@ -1,0 +1,37 @@
+hero:
+  headline: AAA
+  subheadline: BBB
+  background-image: /theme/0x4548/assets/img/covers/cover-5.jpg
+details:
+  chat:
+    headline: CCC
+    a:
+      text: DDD
+      href: EEE
+      title: FFF
+  call:
+    headline: GGG
+    a:
+      text: HHH
+      href: III
+      title: JJJ
+  email:
+    headline: KKK
+    a:
+      text: LLL
+      href: MMM
+      title: NNN
+form:
+  headline: OOO
+  subheadline: PPP
+  fields:
+    name:
+      label: QQQ
+      placeholder: RRR
+    email:
+      label: SSS
+      placeholder: TTT
+    message:
+      label: UUU
+      placeholder: VVV
+  submit: WWW

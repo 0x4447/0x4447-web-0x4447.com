@@ -1,0 +1,389 @@
+---
+layout: '0x4548'
+permalink: /careers.html
+title: Careers
+navOrder: 20
+theme:
+    body:
+        class: 'bg-light'
+    navbar:
+        class: 'navbar-light bg-white'
+        container: 'container-fluid'
+    footer:
+        class: 'bg-dark'
+        wrapper:
+          class: 'pt-11 bg-dark'
+---
+
+{% assign cms = site.data.cms.pages.careers %}
+
+<!-- WELCOME
+    ================================================== -->
+    <section data-jarallax data-speed=".8" class="py-10 py-md-14 overlay overlay-black overlay-60 bg-cover jarallax" style="background-image: url({{ cms.hero.background-image }});">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+              
+              <!-- Heading -->
+              <h1 class="display-2 text-white">
+                {{ cms.hero.headline }}
+              </h1>
+  
+              <!-- Text -->
+              <p class="lead text-white-75 mb-6">
+                {{ cms.hero.subheadline }}
+              </p>
+  
+              <!-- Button -->
+              <a href="{{ cms.hero.cta.a.href }}" title="{{ cms.hero.cta.a.title }}" class="btn btn-primary lift">
+                {{ cms.hero.cta.text }} <i class="fe fe-arrow-right ml-3"></i>
+              </a>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- SHAPE
+      ================================================== -->
+      <div class="position-relative">
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+          {% include layouts/0x4548/assets/img/shapes/curves/curve-1.svg %}
+        </div>
+      </div>
+  
+      <!-- VALUES
+      ================================================== -->
+      <section class="pt-8 pt-md-11">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-6">
+              
+              <!-- Badge -->
+              <span class="badge badge-primary-desat-soft badge-pill mb-3">
+                <span class="h6 text-uppercase">
+                  {{ cms.values.tag }}
+                </span>
+              </span>
+  
+              <!-- Heading -->
+              <h2>
+                {{ cms.values.headline }}
+              </h2>
+  
+              <!-- Text -->
+              <p class="font-size-lg text-muted mb-6 mb-md-0">
+                {{ cms.values.blurb }}
+              </p>
+  
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+  
+              <div class="row no-gutters">
+                <div class="col-4">
+                  
+                  <!-- Image -->
+                  <div class="w-150 mt-9 p-1 bg-white shadow-lg">
+                    <img src="{{ cms.values.photos.one.src }}" class="img-fluid" alt="{{ cms.values.photos.one.alt }}">
+                  </div>
+  
+                </div>
+                <div class="col-4">
+                  
+                  <!-- Image -->
+                  <div class="w-150 p-1 bg-white shadow-lg">
+                    <img src="{{ cms.values.photos.two.src }}" class="img-fluid" alt="{{ cms.values.photos.two.alt }}">
+                  </div>
+  
+                </div>
+                <div class="col-4 position-relative">
+                  
+                  <!-- Image -->
+                  <div class="w-150 mt-11 float-right p-1 bg-white shadow-lg">
+                    <img src="{{ cms.values.photos.three.src }}" class="img-fluid" alt="{{ cms.values.photos.three.alt }}">
+                  </div>
+  
+                </div>
+              </div> <!-- / .row -->
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- BENEFITS
+      ================================================== -->
+      <section class="py-8 py-md-11">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-5 order-md-2">
+              
+              <!-- Badge -->
+              <span class="badge badge-success-soft badge-pill mb-3">
+                <span class="h6 text-uppercase">
+                  {{ cms.benefits.tag }}
+                </span>
+              </span>
+  
+              <!-- Heading -->
+              <h2>
+                {{ cms.benefits.headline }}
+              </h2>
+  
+              <!-- Text -->
+              <p class="font-size-lg text-muted mb-6 mb-md-0">
+                {{ cms.benefits.blurb }}
+              </p>
+  
+            </div>
+            <div class="col-12 col-md-6 order-md-1">
+              
+              <!-- Card -->
+              <div class="card card-border border-success shadow-lg">
+                <div class="card-body">
+                  
+                  <!-- List group -->
+                  <div class="list-group list-group-flush">
+
+                    {% for item in cms.benefits.list %}
+                      <div class="list-group-item d-flex align-items-center">
+                          
+                        <!-- Text -->
+                        <div class="mr-auto">
+                          
+                          <!-- Heading -->
+                          <p class="font-weight-bold mb-1">
+                            {{ item.key }}
+                          </p>
+    
+                          <!-- Text -->
+                          <p class="font-size-sm text-muted mb-0">
+                            {{ item.value }}
+                          </p>
+    
+                        </div>
+                          
+                        <!-- Check -->
+                        <div class="badge badge-rounded-circle badge-success-soft ml-4">
+                          <i class="fe fe-check"></i>
+                        </div>
+    
+                      </div>
+                    {% endfor %}
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- IMAGE
+      ================================================== -->
+      <section data-jarallax data-speed=".8" class="py-14 py-lg-16 jarallax" style="background-image: url({{ cms.break.background-image }});">
+  
+        <!-- Shape -->
+        <div class="shape shape-top shape-fluid-x svg-shim text-light">
+          {% include layouts/0x4548/assets/img/shapes/angles/angle-top.svg %}
+        </div>
+  
+        <!-- Shape -->
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-light">
+          {% include layouts/0x4548/assets/img/shapes/angles/angle-bottom.svg %}
+        </div>
+  
+      </section>
+  
+      <!-- APPLYING
+      ================================================== -->
+      <section class="pt-6 pt-md-8">
+        <div class="container pb-8 pb-md-11 border-bottom border-gray-300">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+              
+              <!-- Badge -->
+              <span class="badge badge-pill badge-primary-desat-soft mb-3">
+                <span class="h6 text-uppercase">{{ cms.applying.tag }}</span>
+              </span>
+  
+              <!-- Heading -->
+              <h2>
+                {{ cms.applying.headline }}
+              </h2>
+  
+              <!-- Text -->
+              <p class="font-size-lg text-gray-700 mb-7 mb-md-9">
+                {{ cms.applying.blurb }}
+              </p>
+  
+            </div>
+          </div> <!-- / .row -->
+
+          <div class="row align-items-center mb-5">
+            <div class="col">
+              
+              <!-- Heading -->
+              <h4 class="font-weight-bold mb-1">
+                {{ cms.applying.table.headline }}
+              </h4>
+  
+              <!-- Text -->
+              <p class="font-size-sm text-muted mb-0">
+                {{ cms.applying.table.blurb }}
+              </p>
+  
+            </div>
+            <div class="col-auto">
+              
+              <!-- Badge -->
+              <span class="badge badge-pill badge-success-soft">
+                <span class="h6 text-uppercase">{{ cms.applying.table.jobs.size }} opening{% if cms.applying.table.jobs.size != 1 %}s{% endif %} </span>
+              </span>
+  
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12">
+              
+              <!-- Table -->
+              <div class="table-responsive mb-7 mb-md-9">
+                <table class="table table-align-middle">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span class="h6 text-uppercase font-weight-bold">
+                          {{ cms.applying.table.columns.one }}
+                        </span>
+                      </th>
+                      <th>
+                        <span class="h6 text-uppercase font-weight-bold">
+                          {{ cms.applying.table.columns.two }}
+                        </span>
+                      </th>
+                      <th>
+                        <span class="h6 text-uppercase font-weight-bold">
+                          {{ cms.applying.table.columns.three }}
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for job in cms.applying.table.jobs %}
+                      <tr>
+                        <td>
+                          
+                          <a href="{{ job.a.href }}" class="text-reset text-decoration-none">
+                            <p class="mb-1">
+                              {{ job.headline }}
+                            </p>
+                            <p class="font-size-sm text-muted mb-0">
+                              {{ job.blurb }}
+                            </p>
+                          </a>
+    
+                        </td>
+                        <td>
+                          
+                          <a href="career-single.html" class="text-reset text-decoration-none">
+                            <p class="font-size-sm mb-0">
+                              {{ job.field2 }}
+                            </p>
+                          </a>
+    
+                        </td>
+                        <td>
+                          
+                          <a href="career-single.html" class="text-reset text-decoration-none">
+                            <p class="font-size-sm mb-0">
+                              {{ job.field3 }}
+                            </p>
+                          </a>
+    
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+  
+            </div>
+          </div> <!-- / .row -->
+          <div class="row">
+            <div class="col-12">
+  
+              <!-- Text -->
+              <p class="font-size-sm text-center text-muted mb-0">
+                {{ cms.applying.table.footer }}
+              </p>
+  
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- TESTIMONIALS
+      ================================================== -->
+      <section class="pt-8 pt-md-11">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 text-center">
+              
+              <!-- Heading -->
+              <h2>
+                {{ cms.testimonial.headline }}
+              </h2>
+  
+              <!-- Text -->
+              <p class="font-size-lg text-muted mb-7 mb-md-9">
+                {{ cms.testimonial.blurb }}
+              </p>
+  
+            </div>
+          </div><!-- / .row -->
+          <div class="card card-row shadow-light-lg">
+            <div class="row no-gutters">
+              <a class="col-12 col-md-6 bg-cover card-img-left" style="background-image: url({{ cms.testimonial.hero.img.src }});" href="{{ cms.testimonial.hero.a.href }}" title="{{ cms.testimonial.hero.a.title }}">
+  
+                <img src="{{ cms.testimonial.hero.img.src }}" alt="{{ cms.testimonial.hero.img.alt }}" class="img-fluid d-md-none invisible">
+  
+                <!-- Shape -->
+                <div class="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
+                  {% include layouts/0x4548/assets/img/shapes/curves/curve-4.svg %}
+                </div>
+  
+              </a>
+              <div class="col-12 col-md-6 order-md-1">
+  
+                <!-- Body -->
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0 text-center">
+                    
+                    <!-- Text -->
+                    <p class="mb-5 mb-md-7">
+                      “{{ cms.testimonial.quote }}”
+                    </p>
+  
+                    <!-- Footer -->
+                    <footer class="blockquote-footer">
+                      <span class="h6 text-uppercase">{{ cms.testimonial.person }}</span>
+                    </footer>
+  
+                  </blockquote>
+                </div>
+  
+              </div>
+  
+            </div>
+          </div>
+        </div> <!-- / .container -->
+      </section>
+  
+      <!-- SHAPE
+      ================================================== -->
+      <div class="position-relative mt-n11">
+        <div class="shape shape-bottom shape-fluid-x svg-shim text-dark">
+          {% include layouts/0x4548/assets/img/shapes/curves/curve-1.svg %}
+        </div>
+      </div>
