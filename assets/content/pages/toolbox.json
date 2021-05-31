@@ -1,0 +1,92 @@
+{
+  "head": {
+    "title": "Toolbox",
+    "meta":
+    {
+      "description": "We love to be efficient, but we hate repetitive work! That's why we build tools that help us do the repetitive work for us.",
+      "ogTitle": "Toolbox",
+      "ogImage": "/assets/img/toolbox/og.png"
+    }
+  },
+  "title": "Our Open-Source Tools",
+  "description": "<p>\nWe love to be efficient, but we hate repetitive work! That's why we build tools that help us do the repetitive\n\t\t\t\t\twork\n\t\t\t\t\tfor us. It's also why we share them with the world so that others can also benefit. We strongly believe in\n\t\t\t\t\tsharing\n\t\t\t\t\tknowledge in the simplest possible way so other people are able to learn what we already know. Sharing in this\n\t\t\t\t\tway\n\t\t\t\t\tallows us to help people create fresh ideas that will benefit our community.</p>\n",
+  "nextTitle": "The next step",
+  "nextContent": "<p>Now that you know all about us, your last step is to <a href=\"/contact\">get in touch with us</a>.</p>",
+  "content": [
+    {
+      "name": "Potato",
+      "text": "<p class=\"lead\">The purpose of 0x4447™'s Potato CLI tool is to streamline the process of hosting a static\n\t\t\t\t\t\t\tweb page\n\t\t\t\t\t\t\ton S3 while using CloudFront to deliver the content.</p>",
+      "img": "toolbox/squares/square1",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/potato",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-potato",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-potato",
+      "value": "potato"
+    },
+    {
+      "name": "Tomato",
+      "text": "<p class=\"lead\">\n            This is 0x4447's take on the express-generator CLI that's included\n            with ExpressJS. We created this project because we'd always spend\n            quite a bit of time on bringing the default ExpressJS template up to\n            speed. This was especially true when there was a constant need to\n            spin up new micro-services.\n          </p>\n          <p class=\"lead\">\n            One of this project's nicest features is how simple it is for the\n            user to customize it. If you have your own style, all you need to do\n            is clone the repo and edit the source folder as you like.\n          </p>",
+      "img": "toolbox/squares/square2",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/tomato",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-tomato",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-tomato",
+      "value": "tomato"
+    },
+    {
+      "name": "Cucumber",
+      "text": "<p class=\"lead\">Cucumber is a small, simple project that we created to save time as we work with Heroku. It\n\t\t\t\t\t\t\tallows\n\t\t\t\t\t\t\tus to easily auto-generate the .env file when we develop the project locally.</p>",
+      "img": "toolbox/squares/square3",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/cucumber",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-cucumber",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-cucumber",
+      "value": "cucumber"
+    },
+    {
+      "name": "Hot Pepper",
+      "text": "<p class=\"lead\">This project will save time for those who work with NodeJS projects and prefer to run them\n\t\t\t\t\t\t\ton a\n\t\t\t\t\t\t\tLinux box using SystemD as the process manager. It creates the SystemD .service file for you, based on\n\t\t\t\t\t\t\tthe content\n\t\t\t\t\t\t\tof the package.json file.</p>",
+      "img": "toolbox/squares/square4",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/hotpepper",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-hot-pepper",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-hot-pepper",
+      "value": "hot_pepper"
+
+    },
+    {
+      "name": "Broccoli",
+      "text": "<p class=\"lead\">If you're a developer with a local Nginx setup, and you like to give the sites you work on\n\t\t\t\t\t\t\tlocal\n\t\t\t\t\t\t\tdomain names, you've experienced the tedium of creating an Nginx config file and restarting Nginx to\n\t\t\t\t\t\t\tload the new\n\t\t\t\t\t\t\tconfiguration. This CLI automatically does all of that for you.</p>",
+      "img": "toolbox/squares/square5",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/broccoli",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-broccoli",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-broccoli",
+      "value": "broccoli"
+
+    },
+    {
+      "name": "Avocado",
+      "text": "<p class=\"lead\">Deploying a simple HTML page that is not build around a framework to AWS CloudFront, is\n\t\t\t\t\t\t\tannoying and\n\t\t\t\t\t\t\ttime consuming. This CLI will build the final page out of a simple folder structure by using the\n\t\t\t\t\t\t\tawesome templating\n\t\t\t\t\t\t\tengine—Hogan.</p>",
+      "img": "toolbox/squares/square6",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/avocado",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-avocado",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-avocado",
+      "value": "avocado"
+    },
+    {
+      "name": "Strawberry",
+      "text": "<p class=\"lead\">This CLI will automatically create a HTTPS redirect from one domain to another using what\n\t\t\t\t\t\t\tAWS has to\n\t\t\t\t\t\t\toffer – so you don't have to manage a server for a simple redirect.</p>",
+      "img": "toolbox/squares/square7",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/strawberry",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-strawberry",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-strawberry",
+      "value": "strawberry"
+    },
+    {
+      "name": "Grapes",
+      "text": "<p class=\"lead\">\n\t\t\t\t\t\t\tThe Grapes CLI tool was created after we experienced increasing frustration as we worked with massive CloudFormation files. We're amazed by what AWS CloudFormation can do and the way it helps with managing the AWS infrastructure, but working with one gigantic file is too labor intensive and prone to countless errors and endless frustration.\n\t\t\t\t\t\t</p>\n\n\t\t\t\t\t\t<p class=\"lead\">\n\t\t\t\t\t\t\tWe decided to do something about this. The end result is Grapes, a simple CLI tool that cuts the amount of time spent creating a stack in half. It makes the entire process more enjoyable, in addition to making it easy to organize and extend.\n\t\t\t\t\t\t</p>\n",
+      "img": "toolbox/squares/square8",
+      "npmUrl": "https://www.npmjs.com/package/@0x4447/grapes",
+      "githubUrl": "https://github.com/0x4447/0x4447-cli-node-grapes",
+      "travisUrl": "https://travis-ci.org/0x4447/0x4447-cli-node-grapes",
+      "value": "grapes"
+
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "bootstrap-home",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.6.0",
+    "choices.js": "^9.0.1",
+    "core-js": "^3.9.1",
+    "countup.js": "^1.9.3",
+    "dropzone": "^5.8.1",
+    "flickity-fade": "^1.0.0",
+    "highlightjs": "^9.16.2",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "jarallax": "^1.12.5",
+    "jquery": "^3.6.0",
+    "node-sass": "^6.0.0",
+    "nuxt": "^2.15.3",
+    "quill": "^1.3.7",
+    "smooth-scroll": "^16.1.3",
+    "typed.js": "^2.0.12",
+    "vue-typed-js": "^0.1.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.7.0",
+    "fibers": "^5.0.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "sass": "^1.34.0",
+    "sass-loader": "10",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0"
+  }
+}
