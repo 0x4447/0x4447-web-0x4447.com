@@ -3,7 +3,7 @@ export default {
     color: '#007bff',
     height: '1px'
   },
-  router: {git
+  router: {
     linkActiveClass: "active",
     linkExactActiveClass: "exact-active"
   },
