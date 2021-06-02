@@ -109,6 +109,14 @@ export default {
     Sitemap: process.env.BASE_URL + "/sitemap.xml"
   },
 
+  sitemap: {
+    /* module options */
+    path: '/sitemap.xml',
+    hostname: process.env.BASE_URL,
+    generate: true,
+    gzip: true,
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 
