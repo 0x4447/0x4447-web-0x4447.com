@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - echo AWS_REGION=$AWS_REGION >> .env
+      - echo AWS_IDENTITY_POOL_ID=$AWS_IDENTITY_POOL_ID >> .env
+      - echo NODE_ENV=production >> .env
+      - npm install
+      - npm run generate
+  pre_build:
+    commands:
+      - aws s3 sync --delete ./dist s3://$S3_BUCKET_WEBPAGE
+      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
