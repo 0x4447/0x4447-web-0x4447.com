@@ -1,0 +1,12 @@
+{
+  "head": {
+    "title": "Thank You",
+    "meta": {
+      "description": "Now that you've contacted us, the truly last thing to do is to just wait :)",
+      "ogTitle": "Thank You",
+      "ogImage": "/assets/img/thankyou/og.png"
+    }
+  },
+  "nextTitle": "The next step",
+  "nextContent": "Now that you've contacted us, the truly last thing to do is to just wait :) "
+}

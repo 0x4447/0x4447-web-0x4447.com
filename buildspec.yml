@@ -3,21 +3,14 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      ruby: 2.6
+      nodejs: 12
     commands:
-      - echo LAMBDA_FORM_CONTACT=$LAMBDA_FORM_CONTACT >> .env
       - echo AWS_REGION=$AWS_REGION >> .env
       - echo IDENTITY_POOL_ID=$IDENTITY_POOL_ID >> .env
-      - echo DISTRIBUTION_ID=$DISTRIBUTION_ID >> .env
-      - gem install bundler
+      - echo NODE_ENV=production >> .env
+      - npm install
+      - npm run generate
   pre_build:
     commands:
-      - bundle install
-  build:
-    commands:
-      - bundle exec jekyll build
-  post_build:
-    commands:
-      - aws s3 rm --recursive s3://$S3_BUCKET
-      - aws s3 cp ./_site s3://$S3_BUCKET --recursive
+      - aws s3 sync --delete ./dist s3://$S3_BUCKET
       - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
