@@ -1,0 +1,44 @@
+// roboto-mono-100 - latin
+@include font-face(
+  'Roboto Mono',
+  'roboto-mono-v5-latin-100',
+  100,
+  'Roboto Mono Thin',
+  'RobotoMono-Thin'
+);
+
+// roboto-mono-300 - latin
+@include font-face(
+  'Roboto Mono',
+  'roboto-mono-v5-latin-300',
+  300,
+  'Roboto Mono Light',
+  'RobotoMono-Light'
+);
+
+// roboto-mono-regular - latin
+@include font-face(
+  'Roboto Mono',
+  'roboto-mono-v5-latin-regular',
+  400,
+  'Regular' 'Roboto Mono',
+  'RobotoMono-Regular'
+);
+
+//roboto-mono-500 - latin
+@include font-face(
+  'Roboto Mono',
+  'roboto-mono-v5-latin-500',
+  500,
+  'Roboto Mono Medium',
+  'RobotoMono-Medium'
+);
+
+//roboto-mono-700 - latin
+@include font-face(
+  'Roboto Mono',
+  'roboto-mono-v5-latin-700',
+  700,
+  'Roboto Mono Bold',
+  'RobotoMono-Bold'
+);

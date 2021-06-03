@@ -1,26 +1,12 @@
 html,
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
   padding-bottom: 3rem;
   font-weight: 300;
 }
 
 a:hover {
   color: #007bff;
-}
-
-#header {
-  position: relative;
-  overflow: hidden;
-}
-
-#menu-button {
-  font-size: 1.375rem;
-  color: #007bff;
-}
-
-.rounded-circle {
-  margin-bottom: 15px;
 }
 
 .navbar-link {
@@ -37,71 +23,6 @@ a:hover {
 
 .home-header-text {
   font-size: 1.75rem;
-}
-
-/* Scrolling icon
--------------------------------------------------- */
-
-#icon-scroll {
-  display: none;
-}
-
-.icon-scroll-row {
-  height: 70px;
-  margin-bottom: 5vh;
-}
-
-.icon-scroll,
-.icon-scroll:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-}
-
-.icon-scroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  box-shadow: inset 0 0 0 1px rgb(33, 37, 41);
-  border-radius: 25px;
-}
-
-.icon-scroll:before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: rgb(33, 37, 41);
-  margin-left: -4px;
-  top: 8px;
-  border-radius: 4px;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: scroll;
-  animation-name: scroll;
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(46px);
-    transform: translateY(46px);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(46px);
-    transform: translateY(46px);
-  }
 }
 
 /* MARKETING CONTENT
@@ -137,7 +58,7 @@ a:hover {
 
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  border-top-color: #ffffff;
+  border-top-color: #fff;
 }
 
 .footer-divider {
@@ -184,7 +105,7 @@ a:hover {
 #badges {
   height: 40px;
   text-align: justify;
-  font-size: 0.1px; /* IE 9 & 10 don't like font-size: 0; */
+  font-size: 0.1px; /* IE 9 & 10 don't like fonts-size: 0; */
   padding-right: 2.5rem;
   padding-left: 2.5rem;
   width: 100%;
@@ -195,12 +116,11 @@ a:hover {
   width: 40px;
   height: 40px;
   display: inline-block;
-}
-
-#badges:after {
-  content: "";
-  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-  display: inline-block;
+  &::after {
+    content: '';
+    width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+    display: inline-block;
+  }
 }
 
 #copy {
@@ -334,5 +254,7 @@ a:hover {
   }
 }
 
+.active-link,
 .exact-active {
-  font-weight: 100 !important;}
+  font-weight: 100 !important;
+}

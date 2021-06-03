@@ -18,10 +18,8 @@ export default {
   components: { PageHeader, NextTextComponent },
   data() {
     return {
-      data
+      data,
     };
-  }
+  },
 };
 </script>
-
-<style scoped></style>

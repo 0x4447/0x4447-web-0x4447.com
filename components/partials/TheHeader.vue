@@ -1,23 +1,42 @@
 <template>
-  <header>
+  <header class="header">
     <nav
-      class="navbar navbar-light navbar-expand-lg site-header sticky-top d-flex justify-content-end"
+      class="
+        navbar navbar-light navbar-expand-lg
+        site-header
+        sticky-top
+        d-flex
+        justify-content-end
+      "
     >
       <button
+        data-bs-target="#navbarSupportedContent"
+        data-bs-toggle="collapse"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
         class="navbar-toggler mx-auto"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
       >
-        <span id="menu-button">Menu</span>
+        <span class="header__menu-button">Menu</span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        id="navbarSupportedContent"
+        class="header__navbar collapse navbar-collapse"
+      >
         <ul
-          class="navbar-nav mr-auto container d-flex flex-column flex-md-row justify-content-between"
+          class="
+            header__navbar-list
+            navbar-nav
+            mr-auto
+            container
+            d-flex
+            flex-column flex-md-row
+            justify-content-between
+          "
         >
           <li class="nav-item">
             <NuxtLink
@@ -71,16 +90,15 @@
 
 <script>
 export default {
-  name: "TheHeader"
-};
+  name: 'TheHeader',
+}
 </script>
 
 <style lang="scss">
-.active-link {
-  font-weight: 100 !important;
-}
-
-.navbar-link {
-  font-weight: 300;
+.header {
+  &__menu-button {
+    font-size: 1.375rem;
+    color: #007bff;
+  }
 }
 </style>

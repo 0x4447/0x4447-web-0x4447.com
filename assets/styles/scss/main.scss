@@ -3,8 +3,8 @@
  * to ensure cascade of styles.
  */
 // Bootstrap core
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap/scss/bootstrap';
 
-// custom classes
-@import "_fonts";
-@import "_global";
+// import custom scss
+@import 'abstracts';
+@import 'base';

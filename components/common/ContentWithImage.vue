@@ -1,18 +1,14 @@
 <template>
-  <div class="row full-height-row d-flex align-items-center" :id="data.value">
+  <div :id="data.value" class="row full-height-row d-flex align-items-center">
     <div
-      :class="
-        `col-md-6 ${[
-          imageLeft ? 'order-md-2 order-sm-1' : 'order-md-1 order-sm-2'
-        ]}`
-      "
+      :class="`col-md-6 ${[
+        imageLeft ? 'order-md-2 order-sm-1' : 'order-md-1 order-sm-2',
+      ]}`"
     >
       <picture class="featurette-image img-fluid mx-auto">
         <source
-          :srcset="
-            `${require(`~/assets/img/${data.img}@1x.png`)} 1x,
-          ${require(`~/assets/img/${data.img}@2x.png`)} 2x`
-          "
+          :srcset="`${require(`~/assets/img/${data.img}@1x.png`)} 1x,
+          ${require(`~/assets/img/${data.img}@2x.png`)} 2x`"
         />
         <img
           class="featurette-image img-fluid mx-auto"
@@ -44,26 +40,23 @@
 
 <script>
 export default {
-  name: "ContentWithImage",
+  name: 'ContentWithImage',
   props: {
     imageLeft: {
       type: Boolean,
-      default: false
+      default: false,
     },
     data: {
       type: Object,
-      required: true
-    }
-  }
-};
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="scss">
 .full-height-row {
   min-height: 100vh;
-}
-
-#header .featurette-image {
 }
 
 /* Thin out the marketing headings */

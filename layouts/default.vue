@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import TheHeader from "../components/partials/TheHeader";
-import TheFooter from "../components/partials/TheFooter";
+import TheHeader from '../components/partials/TheHeader'
+import TheFooter from '../components/partials/TheFooter'
 export default {
-  components: { TheFooter, TheHeader }
-};
+  components: { TheFooter, TheHeader },
+}
 </script>
 
 <style>
