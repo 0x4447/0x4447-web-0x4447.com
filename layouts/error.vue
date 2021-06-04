@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader name="error" alt="0x4447, LLC. - Error" />
-    <div class="container marketing"></div>
+    <div class="container"></div>
   </div>
 </template>
 

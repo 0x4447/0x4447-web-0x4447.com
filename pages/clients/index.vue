@@ -2,7 +2,7 @@
   <div>
     <PageHeader name="clients" alt="0x4447, LLC. - Clients" />
 
-    <div class="container marketing">
+    <div class="container">
       <PageHeaderText :title="data.title" :description="data.description" />
 
       <hr class="featurette-divider" />
@@ -23,21 +23,21 @@
 </template>
 
 <script>
-import PageHeader from "../../components/common/PageHeader";
-import ClientsColItem from "../../components/clients/ClientsColItem";
-import PageHeaderText from "../../components/common/PageHeaderText";
-import headMixins from "../../mixins/head-mixins";
-import data from "~/assets/content/pages/clients.json";
-import NextTextComponent from "../../components/common/NextTextComponent";
+import PageHeader from '../../components/common/PageHeader'
+import ClientsColItem from '../../components/clients/ClientsColItem'
+import PageHeaderText from '../../components/common/PageHeaderText'
+import headMixins from '../../mixins/head-mixins'
+import NextTextComponent from '../../components/common/NextTextComponent'
+import data from '~/assets/content/pages/clients.json'
 
 export default {
-  name: "Clients",
+  name: 'Clients',
   components: { NextTextComponent, PageHeaderText, ClientsColItem, PageHeader },
   mixins: [headMixins],
   data() {
     return {
-      data
-    };
-  }
-};
+      data,
+    }
+  },
+}
 </script>

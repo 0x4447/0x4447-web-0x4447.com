@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <div
       class="
         container
@@ -18,15 +18,13 @@
             justify-content-center
             mt-0 mt-sm-5
           "
-          id="home_header"
         >
           <img
-            class="mx-auto"
+            class="home__header-logo mx-auto"
             src="~/assets/img/global/company_logo_rectangle.svg"
-            id="home_header_logo"
             alt="logo"
           />
-          <p class="mt-3 text-center home-header-text">
+          <p class="mt-3 text-center home__header-text">
             We build software with solid foundations to provide flexible
             solutions that are easily modified and extended.
           </p>
@@ -34,7 +32,7 @@
       </div>
       <IconScroll />
     </div>
-    <div class="container marketing">
+    <div class="container">
       <ContentWithImage
         v-for="(item, index) in data.content"
         :key="index"
@@ -66,3 +64,19 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.home {
+  &__header-logo {
+    max-width: rem(480);
+  }
+
+  &__header-text {
+    font-size: rem(28);
+
+    @include media-breakpoint-down(md) {
+      font-size: rem(20);
+    }
+  }
+}
+</style>

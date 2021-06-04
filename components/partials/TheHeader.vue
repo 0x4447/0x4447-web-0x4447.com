@@ -10,24 +10,17 @@
       "
     >
       <button
-        data-bs-target="#navbarSupportedContent"
-        data-bs-toggle="collapse"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
         aria-label="Toggle navigation"
-        class="navbar-toggler mx-auto"
+        class="navbar-toggler mx-auto pt-1 border-0 mb-2"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
+        @click="toggleMenu"
       >
         <span class="header__menu-button">Menu</span>
       </button>
 
-      <div
-        id="navbarSupportedContent"
-        class="header__navbar collapse navbar-collapse"
-      >
+      <div ref="navbar" class="header__navbar navbar-collapse">
         <ul
+          ref="navbarList"
           class="
             header__navbar-list
             navbar-nav
@@ -35,6 +28,7 @@
             container
             d-flex
             flex-column flex-md-row
+            align-items-center
             justify-content-between
           "
         >
@@ -91,6 +85,21 @@
 <script>
 export default {
   name: 'TheHeader',
+  data() {
+    return {
+      menuIsOpen: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      const { navbar, navbarList } = this.$refs
+      navbar.style.maxHeight = this.menuIsOpen
+        ? '0px'
+        : navbarList.clientHeight + 'px'
+
+      this.menuIsOpen = !this.menuIsOpen
+    },
+  },
 }
 </script>
 
@@ -99,6 +108,20 @@ export default {
   &__menu-button {
     font-size: 1.375rem;
     color: #007bff;
+  }
+
+  &__navbar {
+    overflow: hidden;
+    max-height: none;
+    transition: 0.3s ease;
+
+    @include media-breakpoint-down(lg) {
+      max-height: 0;
+    }
+  }
+
+  .exact-active {
+    font-weight: 100 !important;
   }
 }
 </style>
