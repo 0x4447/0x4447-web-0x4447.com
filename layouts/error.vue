@@ -1,17 +1,21 @@
 <template>
   <div>
     <PageHeader name="error" alt="0x4447, LLC. - Error" />
-
-    <div class="container marketing"></div>
+    <div class="container"></div>
   </div>
 </template>
 
 <script>
-import PageHeader from "../components/common/PageHeader";
+import PageHeader from '../components/common/PageHeader'
 export default {
-  name: "Error",
+  name: 'Error',
   components: { PageHeader },
-  props: ["error"],
-  layout: "error" // you can set a custom layout for the error page
-};
+  layout: 'error',
+  props: {
+    error: {
+      type: Object,
+      required: true,
+    },
+  },
+}
 </script>

@@ -1,0 +1,26 @@
+.full-screen-container {
+  min-height: calc(100vh - 56px);
+
+  @include media-breakpoint-down(xs) {
+    min-height: calc(100vh - 36px);
+  }
+
+  @include media-breakpoint-between(xs, lg) {
+    min-height: calc(100vh - 48px);
+  }
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: rem(80) 0; /* Space out the Bootstrap <hr> more */
+  border-top-color: #fff;
+
+  @include media-breakpoint-down(sm) {
+    .featurette-divider {
+      margin-top: rem(8);
+      margin-bottom: rem(8);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+html,
+body {
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: rem(48);
+  font-weight: 300;
+}
+
+a {
+  &:hover {
+    color: #007bff;
+  }
+}

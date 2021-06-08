@@ -1,16 +1,13 @@
 <template>
-  <div class="col-lg-4">
-    <picture class="rounded-circle">
+  <div class="clients-col-item col-lg-4">
+    <picture class="mb-3">
       <source
-        :srcset="
-          `${require(`~/assets/img/clients/logos/${client.logo}@1x.jpg`)} 1x, ${require(`~/assets/img/clients/logos/${client.logo}@2x.jpg`)} 2x`
-        "
+        :srcset="`${require(`~/assets/img/clients/logos/${client.logo}@1x.jpg`)} 1x, ${require(`~/assets/img/clients/logos/${client.logo}@2x.jpg`)} 2x`"
       />
       <img
         :src="`~/assets/img/clients/logos/${client.logo}@1x.jpg`"
-        width="140"
-        height="140"
         :alt="client.name"
+        class="clients-col-item__img"
       />
     </picture>
     <h2>{{ client.name }}</h2>
@@ -20,12 +17,21 @@
 
 <script>
 export default {
-  name: "ClientsColItem",
+  name: 'ClientsColItem',
   props: {
     client: {
       type: Object,
-      required: true
-    }
-  }
-};
+      required: true,
+    },
+  },
+}
 </script>
+
+<style lang="scss">
+.clients-col-item {
+  &__img {
+    width: 140px;
+    height: 140px;
+  }
+}
+</style>

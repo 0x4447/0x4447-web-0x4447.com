@@ -7,35 +7,32 @@
 
 <script>
 export default {
-  name: "NextTextComponent",
+  name: 'NextTextComponent',
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     text: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   mounted() {
-    this.$refs.nextContent.addEventListener("click", this.convertAToNuxtLink);
+    this.$refs.nextContent.addEventListener('click', this.convertAToNuxtLink)
   },
   beforeDestroy() {
-    this.$refs.nextContent.removeEventListener(
-      "click",
-      this.convertAToNuxtLink
-    );
+    this.$refs.nextContent.removeEventListener('click', this.convertAToNuxtLink)
   },
   methods: {
     convertAToNuxtLink(e) {
-      e.preventDefault();
-      const anchor = e.target.closest("a");
+      e.preventDefault()
+      const anchor = e.target.closest('a')
       if (anchor !== null) {
-        this.$router.push({ path: anchor.getAttribute("href") });
+        this.$router.push({ path: anchor.getAttribute('href') })
       }
-      return false;
-    }
-  }
-};
+      return false
+    },
+  },
+}
 </script>

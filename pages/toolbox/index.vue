@@ -1,13 +1,19 @@
 <template>
   <div>
     <div
-      class="container full-screen-container d-flex flex-column justify-content-start justify-content-md-center"
+      class="
+        container
+        full-screen-container
+        d-flex
+        flex-column
+        justify-content-start justify-content-md-center
+      "
     >
       <PageHeader name="toolbox" alt="0x4447, LLC. - Toolbox" />
       <PageHeaderText :title="data.title" :description="data.description" />
     </div>
 
-    <div class="container marketing">
+    <div class="container">
       <ContentWithImage
         v-for="(item, index) in data.content"
         :key="index"
@@ -23,26 +29,26 @@
 </template>
 
 <script>
-import PageHeader from "../../components/common/PageHeader";
-import ContentWithImage from "../../components/common/ContentWithImage";
-import PageHeaderText from "../../components/common/PageHeaderText";
-import headMixins from "../../mixins/head-mixins";
-import data from "~/assets/content/pages/toolbox.json";
-import NextTextComponent from "../../components/common/NextTextComponent";
+import PageHeader from '../../components/common/PageHeader'
+import ContentWithImage from '../../components/common/ContentWithImage'
+import PageHeaderText from '../../components/common/PageHeaderText'
+import headMixins from '../../mixins/head-mixins'
+import NextTextComponent from '../../components/common/NextTextComponent'
+import data from '~/assets/content/pages/toolbox.json'
 
 export default {
-  name: "Toolbox",
+  name: 'Toolbox',
   components: {
     NextTextComponent,
     PageHeaderText,
     ContentWithImage,
-    PageHeader
+    PageHeader,
   },
   mixins: [headMixins],
   data() {
     return {
-      data
-    };
-  }
-};
+      data,
+    }
+  },
+}
 </script>

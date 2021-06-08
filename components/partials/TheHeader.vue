@@ -1,23 +1,36 @@
 <template>
-  <header>
+  <header class="header">
     <nav
-      class="navbar navbar-light navbar-expand-lg site-header sticky-top d-flex justify-content-end"
+      class="
+        navbar navbar-light navbar-expand-lg
+        site-header
+        sticky-top
+        d-flex
+        justify-content-end
+      "
     >
       <button
-        class="navbar-toggler mx-auto"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
         aria-label="Toggle navigation"
+        class="navbar-toggler mx-auto pt-1 border-0 mb-2"
+        type="button"
+        @click="toggleMenu"
       >
-        <span id="menu-button">Menu</span>
+        <span class="header__menu-button">Menu</span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div ref="navbar" class="header__navbar navbar-collapse">
         <ul
-          class="navbar-nav mr-auto container d-flex flex-column flex-md-row justify-content-between"
+          ref="navbarList"
+          class="
+            header__navbar-list
+            navbar-nav
+            mr-auto
+            container
+            d-flex
+            flex-column flex-md-row
+            align-items-center
+            justify-content-between
+          "
         >
           <li class="nav-item">
             <NuxtLink
@@ -71,16 +84,44 @@
 
 <script>
 export default {
-  name: "TheHeader"
-};
+  name: 'TheHeader',
+  data() {
+    return {
+      menuIsOpen: false,
+    }
+  },
+  methods: {
+    toggleMenu() {
+      const { navbar, navbarList } = this.$refs
+      navbar.style.maxHeight = this.menuIsOpen
+        ? '0px'
+        : navbarList.clientHeight + 'px'
+
+      this.menuIsOpen = !this.menuIsOpen
+    },
+  },
+}
 </script>
 
 <style lang="scss">
-.active-link {
-  font-weight: 100 !important;
-}
+.header {
+  &__menu-button {
+    font-size: 1.375rem;
+    color: #007bff;
+  }
 
-.navbar-link {
-  font-weight: 300;
+  &__navbar {
+    overflow: hidden;
+    max-height: none;
+    transition: 0.3s ease;
+
+    @include media-breakpoint-down(lg) {
+      max-height: 0;
+    }
+  }
+
+  .exact-active {
+    font-weight: 100 !important;
+  }
 }
 </style>

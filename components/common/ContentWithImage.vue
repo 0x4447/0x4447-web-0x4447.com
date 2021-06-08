@@ -1,30 +1,32 @@
 <template>
-  <div class="row full-height-row d-flex align-items-center" :id="data.value">
+  <div
+    :id="data.value"
+    class="content-with-image row d-flex align-items-center my-4 my-lg-0"
+  >
     <div
-      :class="
-        `col-md-6 ${[
-          imageLeft ? 'order-md-2 order-sm-1' : 'order-md-1 order-sm-2'
-        ]}`
-      "
+      :class="`col-md-6 ${[
+        imageLeft ? 'order-md-2 order-sm-1' : 'order-md-1 order-sm-2',
+      ]}`"
     >
-      <picture class="featurette-image img-fluid mx-auto">
+      <picture class="img-fluid mx-auto">
         <source
-          :srcset="
-            `${require(`~/assets/img/${data.img}@1x.png`)} 1x,
-          ${require(`~/assets/img/${data.img}@2x.png`)} 2x`
-          "
+          :srcset="`${require(`~/assets/img/${data.img}@1x.png`)} 1x,
+          ${require(`~/assets/img/${data.img}@2x.png`)} 2x`"
         />
         <img
-          class="featurette-image img-fluid mx-auto"
+          class="img-fluid mx-auto"
           :src="require(`~/assets/img/${data.img}@1x.png`)"
           alt="0x4447 Tomato"
         />
       </picture>
     </div>
     <div class="col-md-6 order-md-1 order-sm-2">
-      <h2 class="featurette-heading hover-link-container">
+      <h2 class="content-with-image__heading">
         {{ data.name }}
-        <NuxtLink :to="{ hash: data.value }">
+        <NuxtLink
+          class="content-with-image__heading-link-icon"
+          :to="{ hash: data.value }"
+        >
           <img src="~/assets/img/global/baseline-link.svg" alt="Link Icon" />
         </NuxtLink>
       </h2>
@@ -44,43 +46,47 @@
 
 <script>
 export default {
-  name: "ContentWithImage",
+  name: 'ContentWithImage',
   props: {
     imageLeft: {
       type: Boolean,
-      default: false
+      default: false,
     },
     data: {
       type: Object,
-      required: true
-    }
-  }
-};
+      required: true,
+    },
+  },
+}
 </script>
 
 <style lang="scss">
-.full-height-row {
+.content-with-image {
   min-height: 100vh;
-}
 
-#header .featurette-image {
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.05rem;
-  @media (min-width: 40em) {
-    font-size: 50px;
+  &__heading-link-icon {
+    position: relative;
+    visibility: hidden;
+    margin: 0 -10px;
   }
 
-  @media (min-width: 62em) {
-    margin-top: 7rem;
-  }
-}
+  &__heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: rem(-0.8);
+    &:hover {
+      .content-with-image__heading-link-icon {
+        visibility: visible;
+      }
+    }
 
-.lead {
-  font-weight: 300;
+    @include media-breakpoint-up(sm) {
+      font-size: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(112);
+    }
+  }
 }
 </style>

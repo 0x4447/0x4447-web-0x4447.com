@@ -1,0 +1,14 @@
+$browser-context: 16; // Default
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+  $result: #{$pixels/$context}em;
+  @return $result;
+}
+
+@function vw($pixels) {
+  @return #{($pixels/1920) * 100}vw;
+}
