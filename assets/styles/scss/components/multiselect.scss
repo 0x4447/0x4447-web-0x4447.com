@@ -74,17 +74,18 @@
     }
 
     &__input {
-      color: #6c757d;
+      color: $input-placeholder-color;
       width: auto !important;
       &::placeholder {
-        color: #6c757d;
+        color: $input-placeholder-color;
+        opacity: 1;
       }
     }
 
     &__placeholder {
       margin: 0;
       padding: 0;
-      color: #6c757d;
+      color: $input-placeholder-color;
     }
 
     &__option {

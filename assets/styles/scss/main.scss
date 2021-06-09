@@ -2,10 +2,12 @@
  * Custom variables followed by theme variables followed by Bootstrap variables
  * to ensure cascade of styles.
  */
-// Bootstrap core
-@import 'bootstrap/scss/bootstrap';
 
 // import custom scss
 @import 'abstracts';
+// Bootstrap core
+@import 'bootstrap/scss/bootstrap';
+// import custom scss
+
 @import 'base';
 @import 'components';
