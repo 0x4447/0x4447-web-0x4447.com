@@ -3,6 +3,7 @@
     <label>{{ label }}</label>
     <textarea
       v-bind="$attrs"
+      :placeholder="placeholder"
       :value="value"
       :type="type"
       :required="required"

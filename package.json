@@ -18,15 +18,16 @@
   "dependencies": {
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/svg-sprite": "^0.5.2",
     "aws-sdk": "^2.920.0",
     "bootstrap": "^4.6.0",
     "core-js": "^3.8.3",
-    "jquery": "^3.6.0",
     "node-sass": "^5.0.0",
     "nuxt": "^2.14.12",
     "sass": "~1.32.6",
     "sass-loader": "10",
-    "vee-validate": "^3.4.8"
+    "vee-validate": "^3.4.8",
+    "vue-multiselect": "^2.1.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

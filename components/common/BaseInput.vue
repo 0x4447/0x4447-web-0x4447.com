@@ -6,6 +6,7 @@
       :type="type"
       :required="required"
       :disabled="disabled"
+      :placeholder="placeholder"
       class="form-control"
       @input="onInput($event.target.value)"
       @blur="onBlur($event)"
