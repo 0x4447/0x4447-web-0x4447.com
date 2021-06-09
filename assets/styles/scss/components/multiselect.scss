@@ -75,7 +75,6 @@
 
     &__input {
       color: $input-placeholder-color;
-      width: auto !important;
       &::placeholder {
         color: $input-placeholder-color;
         opacity: 1;
