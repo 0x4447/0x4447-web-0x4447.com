@@ -1,0 +1,148 @@
+@import 'vue-multiselect/dist/vue-multiselect.min.css';
+
+.contact-form {
+  .multiselect {
+    &__tags {
+      display: block;
+      width: 100%;
+      min-height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      font-family: inherit;
+    }
+
+    &__tag {
+      font-size: 1rem;
+      position: relative;
+      display: inline-block;
+      padding: 0 18px 0 0;
+      border-radius: 0;
+      margin-right: 6px;
+      color: #495057;
+      line-height: 1.2;
+      background: transparent;
+      margin-bottom: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+      text-overflow: ellipsis;
+
+      &-icon {
+        cursor: pointer;
+        margin-left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        font-weight: 700;
+        font-style: normal;
+        width: 18px;
+        text-align: center;
+        line-height: 18px;
+        transition: all 0.2s ease;
+        border-radius: 0;
+        &::after {
+          color: #495057;
+        }
+        &:hover {
+          background: transparent;
+          &::after {
+            color: #495057;
+          }
+        }
+      }
+    }
+
+    &__select {
+      transform-origin: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      &::before {
+        content: '';
+        display: none;
+      }
+    }
+
+    &__input {
+      color: $input-placeholder-color;
+      &::placeholder {
+        color: $input-placeholder-color;
+        opacity: 1;
+      }
+    }
+
+    &__placeholder {
+      margin: 0;
+      padding: 0;
+      color: $input-placeholder-color;
+    }
+
+    &__option {
+      white-space: unset;
+      text-overflow: unset;
+      color: #495057 !important;
+
+      svg {
+        display: none;
+      }
+
+      background: #fff !important;
+
+      &:hover {
+        background: lightgray !important;
+      }
+
+      &--selected {
+        background: lightgray !important;
+
+        svg {
+          display: inline-block;
+        }
+      }
+    }
+
+    .contact-form__multiple-option-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .contact-form__multiselect-option {
+      font-size: 0.9rem;
+    }
+
+    &__input,
+    &__single {
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.base-multiselect.was-validated {
+  .invalid-feedback {
+    display: inline-block !important;
+  }
+
+  &.failed {
+    .multiselect__tags {
+      border-color: #dc3545;
+    }
+  }
+
+  &.passed {
+    .multiselect__tags {
+      border-color: #28a745;
+    }
+  }
+}

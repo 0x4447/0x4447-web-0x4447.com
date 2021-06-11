@@ -1,0 +1,53 @@
+[
+  {
+    "value": "Agriculture, Forestry, Fishing and Hunting"
+  },
+  {
+    "value": "Mining"
+  },
+  {
+    "value": "Utilities"
+  },
+  {
+    "value": "Construction"
+  },
+  {
+    "value": "Manufacturing"
+  },
+  {
+    "value": "Wholesale Trade"
+  },
+  {
+    "value": "Retail Trade"
+  },
+  {
+    "value": "Transportation and Warehousing"
+  },
+  {
+    "value": "Information"
+  },
+  {
+    "value": "Finance and Insurance"
+  },
+  {
+    "value": "Real Evalue and Rental and Leasing"
+  },
+  {
+    "value": "Professional, Scientific and Technical Services"
+  },
+  {
+    "value": "Administration, Business Support and Waste Management Services"
+  },
+  {
+    "value": "Healthcare and Social Assistance"
+  },
+  {
+    "value": "Arts, Entertainment and Recreation"
+  },
+  {
+    "value": "Accommodation and Food Services"
+  },
+  {
+    "value": "Other"
+  }
+]

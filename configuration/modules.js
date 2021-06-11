@@ -19,5 +19,7 @@ export default {
         gzip: true,
       },
     ],
+    // SVG Sprite Module https://github.com/nuxt-community/svg-sprite-module
+    '@nuxtjs/svg-sprite',
   ],
 }
